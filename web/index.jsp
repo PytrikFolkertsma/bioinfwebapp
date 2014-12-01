@@ -37,7 +37,7 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-1">Nucleotide quiz</a>
                 <div id="accordion-1" class="accordion-section-content">
-                    <p><b>explanations about the quiz (eg. question types, number of questions and leaderboard)<br /></b>
+                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)<br /></b>
                         Bacon ipsum dolor amet sint laboris exercitation, turkey turkey turkey turkey aliqua turkey turkey pariatur eu turkey turkey aliquip. Turkey ex elit, turkey quis turkey turkey cillum. Turkey turkey proident irure turkey fugiat. Laborum ut dolor, ullamco sint proident turkey commodo turkey ipsum fugiat turkey turkey. Sed turkey turkey ad turkey, nisi duis fugiat turkey irure id turkey dolore.
                         Minim turkey turkey, turkey in cillum turkey magna turkey exercitation turkey turkey. Cillum deserunt aliquip turkey ipsum turkey turkey laboris turkey turkey ullamco in turkey. Aliqua turkey incididunt, turkey tempor turkey dolore aute turkey turkey. Cupidatat turkey incididunt laborum turkey.
                         Reprehenderit ut culpa turkey ea turkey turkey turkey turkey turkey turkey dolore mollit. Cupidatat turkey sint, quis pariatur turkey turkey. Reprehenderit elit turkey culpa, nulla turkey nostrud turkey turkey velit turkey laboris aliqua. Turkey enim in culpa ut ex ad turkey turkey. Turkey ut ex turkey incididunt turkey turkey cillum.
@@ -75,7 +75,7 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-2">Aminoacid quiz</a>
                 <div id="accordion-2" class="accordion-section-content">
-                    <p><b>explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
+                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
                         Bacon ipsum dolor amet sint laboris exercitation, turkey turkey turkey turkey aliqua turkey turkey pariatur eu turkey turkey aliquip. Turkey ex elit, turkey quis turkey turkey cillum. Turkey turkey proident irure turkey fugiat. Laborum ut dolor, ullamco sint proident turkey commodo turkey ipsum fugiat turkey turkey. Sed turkey turkey ad turkey, nisi duis fugiat turkey irure id turkey dolore.
                         Minim turkey turkey, turkey in cillum turkey magna turkey exercitation turkey turkey. Cillum deserunt aliquip turkey ipsum turkey turkey laboris turkey turkey ullamco in turkey. Aliqua turkey incididunt, turkey tempor turkey dolore aute turkey turkey. Cupidatat turkey incididunt laborum turkey.
                         Reprehenderit ut culpa turkey ea turkey turkey turkey turkey turkey turkey dolore mollit. Cupidatat turkey sint, quis pariatur turkey turkey. Reprehenderit elit turkey culpa, nulla turkey nostrud turkey turkey velit turkey laboris aliqua. Turkey enim in culpa ut ex ad turkey turkey. Turkey ut ex turkey incididunt turkey turkey cillum.
@@ -111,7 +111,7 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-3">BLAST quiz</a>
                 <div id="accordion-3" class="accordion-section-content">
-                    <p><b>explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
+                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
                     <p>Bacon ipsum dolor amet turkey enim nisi turkey turkey, cillum dolore turkey in turkey occaecat turkey. Exercitation esse turkey turkey. Turkey mollit turkey, dolore turkey duis qui turkey excepteur. Turkey turkey turkey incididunt turkey pariatur turkey ad nostrud turkey culpa ut. Non turkey exercitation turkey.
                         Fugiat elit turkey turkey turkey velit anim. Ut non turkey dolore turkey turkey turkey ad turkey enim labore est occaecat. Turkey cillum id, veniam in turkey et turkey cupidatat occaecat nisi. Turkey turkey quis, non turkey turkey cillum fugiat voluptate incididunt officia nulla turkey turkey turkey. Turkey nulla turkey fugiat, voluptate consectetur excepteur deserunt turkey ea.
                         Non turkey lorem in occaecat. Turkey turkey sed exercitation turkey turkey turkey consectetur turkey deserunt turkey proident turkey mollit dolore. Occaecat incididunt turkey turkey turkey. Proident et nostrud sed. Qui turkey turkey sunt turkey turkey sint turkey eiusmod labore laboris.
