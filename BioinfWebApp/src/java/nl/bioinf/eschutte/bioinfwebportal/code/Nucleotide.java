@@ -56,7 +56,7 @@ public enum Nucleotide {
      W{
         @Override
         public String getBase(){
-            return "Adeninte & Thymine";
+            return "Adenine & Thymine";
         }
      },     
      K{

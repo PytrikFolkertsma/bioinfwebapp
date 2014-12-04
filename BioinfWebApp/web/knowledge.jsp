@@ -44,6 +44,7 @@
                             <li><a href="#tabs-5">Nucleotides</a></li>
                         </ul>
                         <div id="tabs-2">
+                            Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.<br/><br/>
                             <table id="report" width="100%">
                                        <thead>
                                            <tr>
@@ -231,9 +232,13 @@
                                         </tr>   
                                    </table>
                                    <div id="dialog" title="Additional information"></div>
-                        </div>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
+                        </div>
                          
                         <div id="tabs-1">
+                            You can find all the information about the nucleotide and amino acid IUPAC codes here. Just hit the desired button and look for what you need.
+                            <br/><br/>
+                            Tip:
+                            Getting tired of moveing your mouse to the address bar, and typing IUPAC Codes every time? Just bookmark this page, and you are only one click removed of finding all the information you need.
                             <c:choose>
                                 <c:when test="${(empty requestScope.nucleotides) && (empty requestScope.amino_acids)}">
                                     Please select an option:
@@ -445,7 +450,58 @@
                                 </table>
                         </div>
                         <div id="tabs-4"></div>
-                        <div id="tabs-5"></div>
+                        <div id="tabs-5">
+                            <table id="nucs" width="100%">
+                                       <thead>
+                                           <tr>
+                                               <th><h6>Name</h6></th>
+                                               <th><h6>Symbol</h6></th>
+                                               <th><h6>DNA/RNA</h6></th>
+                                               <th><h6>Molecular weight</h6></th>
+                                           </tr>
+                                       </thead>                                         
+                                       <tr id = "Adenine" style="cursor: pointer;">
+                                           <div id="Adenine">
+                                               <td class="dialog">Adenine</td>
+                                               <td class="dialog">A</td>
+                                               <td class="dialog">DNA/RNA</td>
+                                               <td class="dialog">135.13 </td>
+                                           </div>
+                                       </tr>                                            
+                                       <tr id = "Cytosine" style="cursor: pointer;">
+                                           <div id="Cytosine">
+                                               <td class="dialog">Cytosine</td>
+                                               <td class="dialog">C</td>
+                                               <td class="dialog">DNA and RNA</td>
+                                               <td class="dialog">111.1</td>
+                                           </div>
+                                       </tr>                                            
+                                       <tr id = "Guanine" style="cursor: pointer;">
+                                           <div id="Guanine">
+                                               <td class="dialog">Guanine</td>
+                                               <td class="dialog">G</td>
+                                               <td class="dialog">DNA and RN</td>
+                                               <td class="dialog">151.13</td>
+                                           </div>
+                                       </tr>                                              
+                                       <tr id = "Thymine" style="cursor: pointer;">
+                                           <div id="Thymine">
+                                               <td class="dialog">Thymine</td>
+                                               <td class="dialog">T</td>
+                                               <td class="dialog">DNA</td>
+                                               <td class="dialog">126.1133</td>
+                                           </div>
+                                       </tr>                                              
+                                       <tr id = "Uracil" style="cursor: pointer;">
+                                           <div id="Uracil">
+                                               <td class="dialog">Uracil</td>
+                                               <td class="dialog">U</td>
+                                               <td class="dialog">RNA</td>
+                                               <td class="dialog">112.0868</td>
+                                           </div>
+                                       </tr>                                              
+                                   </table>
+                        </div>
                         
                     </div>
                 </div>
