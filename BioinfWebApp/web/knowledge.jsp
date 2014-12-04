@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -33,9 +34,6 @@
                 <div class="content2">
                     <h1>Knowledge</h1>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
-
-
-
 
                     <div id="tabs">
                         <ul>
@@ -231,7 +229,7 @@
                                         </tr>   
                                    </table>
                                    <div id="dialog" title="Additional information"></div>
-                        </div>
+                        </div>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
                          
                         <div id="tabs-1">
                             <c:choose>
@@ -245,7 +243,7 @@
                                     </form>
                                 </c:when>
                             </c:choose>
-                            <c:if test='${not empty "${records}"}'>
+                            <c:if test="${! empty requestScope.nucleotides}">
                                 <table>
                                     <tr>
                                         <th>Nucleotide Code</th>
@@ -264,11 +262,28 @@
                                 </table>
                                 <form><input type="button" value="Back" onClick="history.go(-1);return true;">
                             </c:if>
+                            <c:if test="${! empty requestScope.amino_acids}">
+                                <table>
+                                    <tr>
+                                        <th>Full name</th>
+                                        <th>Three letter</th>
+                                        <th>One letter</th>
+                                    </tr>
 
-
-
+                                    <tr>
+                                        <c:forEach var="aa" items="${requestScope.amino_acids}">
+                                            <td>${aa.full}</td>
+                                            <td>${aa.three}</td>
+                                            <td>${aa.one}</td>
+                                    </tr>
+                                    </c:forEach>
+                                </table>
+                                <form><input type="button" value="Back" onClick="history.go(-1);return true;">
+                            </c:if>
                         </div>
-                        <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                        <div id="tabs-3">
+                            hoi
+                        </div>
                     </div>
                 </div>
             </div>   
