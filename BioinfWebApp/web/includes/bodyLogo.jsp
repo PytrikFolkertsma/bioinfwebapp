@@ -5,9 +5,12 @@
 --%>
 
 <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.jsp">Bio<span class="logo_colour">informatics</span></a></h1>
-          <h2>Institute for Life Science and Technology</h2>
-        </div>
+    <div id="logo_text">
+        <!-- class="logo_colour", allows you to change the colour of the text -->
+        <h1><a href="index.jsp">Bio<span class="logo_colour">informatics</span></a></h1>
+        <h2>Institute for Life Science and Technology</h2>
+    </div>
+    <div>
+        <img src="images/hanze_logo.jpg" alt="logo" style="position: absolute; top: 0px;right: 0px;"/>
+    </div>
 </div>
