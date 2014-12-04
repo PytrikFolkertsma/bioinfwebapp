@@ -23,6 +23,7 @@
                 The currently available quizzes contains questions about BLAST, nucleotides and amino acids. In the future
                 more quizzes may be added. For each quiz a leaderboard is maintained so that you can show everyone who is the boss!
                 The leaderboards are based on score and time, if scores are equal the person with the best time ranks highest.
+                
             </p>
             <p>
                 Each quiz is made up of 20 question, the question order is randomized and the questions differ every time.
@@ -37,13 +38,13 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-1">Nucleotide quiz</a>
                 <div id="accordion-1" class="accordion-section-content">
-                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)<br /></b>
-                        Bacon ipsum dolor amet sint laboris exercitation, turkey turkey turkey turkey aliqua turkey turkey pariatur eu turkey turkey aliquip. Turkey ex elit, turkey quis turkey turkey cillum. Turkey turkey proident irure turkey fugiat. Laborum ut dolor, ullamco sint proident turkey commodo turkey ipsum fugiat turkey turkey. Sed turkey turkey ad turkey, nisi duis fugiat turkey irure id turkey dolore.
-                        Minim turkey turkey, turkey in cillum turkey magna turkey exercitation turkey turkey. Cillum deserunt aliquip turkey ipsum turkey turkey laboris turkey turkey ullamco in turkey. Aliqua turkey incididunt, turkey tempor turkey dolore aute turkey turkey. Cupidatat turkey incididunt laborum turkey.
-                        Reprehenderit ut culpa turkey ea turkey turkey turkey turkey turkey turkey dolore mollit. Cupidatat turkey sint, quis pariatur turkey turkey. Reprehenderit elit turkey culpa, nulla turkey nostrud turkey turkey velit turkey laboris aliqua. Turkey enim in culpa ut ex ad turkey turkey. Turkey ut ex turkey incididunt turkey turkey cillum.
-                        Cillum ad dolore turkey magna dolor. Turkey turkey in nisi turkey turkey aliquip turkey labore. Nostrud velit turkey turkey. Cupidatat turkey turkey excepteur, turkey aliquip aliqua turkey turkey ad turkey pariatur. Enim aliquip turkey laboris ut turkey ad elit turkey. <br /><br />
+                    <p><b>Nucleotide quiz<br /></b>
+                    This quiz contains 30 questions about nucleotides. The questions are randomized every time. <br />
+                    It contains questions about UIPAC codes, nucleotide structures, classes and amibiguity. <br />
+                    This quiz includes drag and drop, multiple choice and open questions. In the end the score is calculated and you have a chance to join the leaderbord based on score and time!
+                    So dig in and enhance your knowledge!
                     </p>
-                    <b>Nucleotide leaderbord based on score and time </b>    
+                    <b>Nucleotide leaderbord top 3 based on score and time </b>    
                     <table class="iets">
                         <tr>
                             <th>Player name</th>
@@ -73,14 +74,15 @@
         </div>
         <div class="accordion">
             <div class="accordion-section">
-                <a class="accordion-section-title" href="#accordion-2">Aminoacid quiz</a>
+                <a class="accordion-section-title" href="#accordion-2">Amino acid quiz</a>
                 <div id="accordion-2" class="accordion-section-content">
-                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
-                        Bacon ipsum dolor amet sint laboris exercitation, turkey turkey turkey turkey aliqua turkey turkey pariatur eu turkey turkey aliquip. Turkey ex elit, turkey quis turkey turkey cillum. Turkey turkey proident irure turkey fugiat. Laborum ut dolor, ullamco sint proident turkey commodo turkey ipsum fugiat turkey turkey. Sed turkey turkey ad turkey, nisi duis fugiat turkey irure id turkey dolore.
-                        Minim turkey turkey, turkey in cillum turkey magna turkey exercitation turkey turkey. Cillum deserunt aliquip turkey ipsum turkey turkey laboris turkey turkey ullamco in turkey. Aliqua turkey incididunt, turkey tempor turkey dolore aute turkey turkey. Cupidatat turkey incididunt laborum turkey.
-                        Reprehenderit ut culpa turkey ea turkey turkey turkey turkey turkey turkey dolore mollit. Cupidatat turkey sint, quis pariatur turkey turkey. Reprehenderit elit turkey culpa, nulla turkey nostrud turkey turkey velit turkey laboris aliqua. Turkey enim in culpa ut ex ad turkey turkey. Turkey ut ex turkey incididunt turkey turkey cillum.
-                        Cillum ad dolore turkey magna dolor. Turkey turkey in nisi turkey turkey aliquip turkey labore. Nostrud velit turkey turkey. Cupidatat turkey turkey excepteur, turkey aliquip aliqua turkey turkey ad turkey pariatur. Enim aliquip turkey laboris ut turkey ad elit turkey. <br /><br />
+                    <p><b>Amino acid quiz</b><br />
+                        This quiz consists of 30 questions about amino acids, the questions are randomized every time <br />
+                        It contains questions about IUPAC codes, amino acid structures, abreviations and the amino acid coding table <br />
+                        This quiz includes drag and drop, multiple choice and open questions. In the end the score is calculated and you have a chance to join the leaderbord based on score and time!
+                        So dig in and enhance your knowledge!
                     </p>
+                    <b>Amino acid leaderbord top 3 based on score and time </b>   
                     <table class="iets">
                         <tr>
                             <th>Player name</th>
@@ -111,12 +113,14 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-3">BLAST quiz</a>
                 <div id="accordion-3" class="accordion-section-content">
-                    <p><b>Explanations about the quiz (eg. question types, number of questions and leaderboard)</b><br />
-                    <p>Bacon ipsum dolor amet turkey enim nisi turkey turkey, cillum dolore turkey in turkey occaecat turkey. Exercitation esse turkey turkey. Turkey mollit turkey, dolore turkey duis qui turkey excepteur. Turkey turkey turkey incididunt turkey pariatur turkey ad nostrud turkey culpa ut. Non turkey exercitation turkey.
-                        Fugiat elit turkey turkey turkey velit anim. Ut non turkey dolore turkey turkey turkey ad turkey enim labore est occaecat. Turkey cillum id, veniam in turkey et turkey cupidatat occaecat nisi. Turkey turkey quis, non turkey turkey cillum fugiat voluptate incididunt officia nulla turkey turkey turkey. Turkey nulla turkey fugiat, voluptate consectetur excepteur deserunt turkey ea.
-                        Non turkey lorem in occaecat. Turkey turkey sed exercitation turkey turkey turkey consectetur turkey deserunt turkey proident turkey mollit dolore. Occaecat incididunt turkey turkey turkey. Proident et nostrud sed. Qui turkey turkey sunt turkey turkey sint turkey eiusmod labore laboris.
-                        Turkey ipsum fugiat turkey turkey turkey exercitation. Turkey ad do, irure ex eu turkey turkey turkey ea turkey turkey. Labore cillum turkey turkey turkey turkey officia. Consequat mollit laboris, qui fugiat ex cillum ut anim labore ipsum eiusmod non turkey. Dolore turkey enim, in turkey esse non dolore nulla turkey occaecat laboris turkey pariatur.
+                    <p><b>BLAST quiz</b><br />
+                    This quiz consists of 30 questions about the BLAST tool, the questions are randomized every time. <br />
+                    It contains about BLAST types, flags, input/output types and scoring matrici and algorithms <br />
+                    This quiz includes drag and drop, multiple choice and open questions. In the end the score is calculated and you have a chance to join the leaderbord based on score and time!
+                    So dig in and enhance your knowledge!
+                    
                     </p>
+                    <b>BLAST leaderbord top 3 based on score and time </b>   
                     <table class="iets">
                         <tr>
                             <th>Player name</th>
@@ -147,11 +151,12 @@
             <div class="accordion-section">
                 <a class="accordion-section-title" href="#accordion-4">Leaderboards</a>
                 <div id="accordion-4" class="accordion-section-content">
-                    <p><b>Explanations about the leaderbords etc.</b><br />
-                    <p>Bacon ipsum dolor amet turkey enim nisi turkey turkey, cillum dolore turkey in turkey occaecat turkey. Exercitation esse turkey turkey. Turkey mollit turkey, dolore turkey duis qui turkey excepteur. Turkey turkey turkey incididunt turkey pariatur turkey ad nostrud turkey culpa ut. Non turkey exercitation turkey.
-                        Fugiat elit turkey turkey turkey velit anim. Ut non turkey dolore turkey turkey turkey ad turkey enim labore est occaecat. Turkey cillum id, veniam in turkey et turkey cupidatat occaecat nisi. Turkey turkey quis, non turkey turkey cillum fugiat voluptate incididunt officia nulla turkey turkey turkey. Turkey nulla turkey fugiat, voluptate consectetur excepteur deserunt turkey ea.
-                        Non turkey lorem in occaecat. Turkey turkey sed exercitation turkey turkey turkey consectetur turkey deserunt turkey proident turkey mollit dolore. Occaecat incididunt turkey turkey turkey. Proident et nostrud sed. Qui turkey turkey sunt turkey turkey sint turkey eiusmod labore laboris.
-                        Turkey ipsum fugiat turkey turkey turkey exercitation. Turkey ad do, irure ex eu turkey turkey turkey ea turkey turkey. Labore cillum turkey turkey turkey turkey officia. Consequat mollit laboris, qui fugiat ex cillum ut anim labore ipsum eiusmod non turkey. Dolore turkey enim, in turkey esse non dolore nulla turkey occaecat laboris turkey pariatur.
+                    <p><b>Leaderboards</b><br />
+                    Welcome to the leaderboards! <br />
+                    if you're in one of the leaderboards it means you've done a great job, congratulations! <br />
+                    Your rank on the leaderboard is based on score, if 2 persons have the same score then your rank is based on time of completion <br />
+                    Each leaderboard has 30 spots, so try your best!
+                    
                     </p>
 
                     <table border="0">

@@ -51,9 +51,10 @@ and open the template in the editor.
     display:none;
 }
 
-table, th, td {
+table.iets, th, td {
    border: 1px solid black;
 }
-td {
+td.border {
     text-align: center;
+    border:transparent
 }
