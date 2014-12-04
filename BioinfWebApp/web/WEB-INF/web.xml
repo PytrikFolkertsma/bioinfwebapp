@@ -14,7 +14,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AminoAcidServlet</servlet-name>
-        <url-pattern>/IUPAC_AminoAcids</url-pattern>
+        <url-pattern>/say-hello.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>NucleotideServlet</servlet-name>

@@ -9,8 +9,6 @@ package nl.bioinf.eschutte.bioinfwebportal.servlets;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -46,7 +44,7 @@ public class AminoAcidServlet extends HttpServlet {
             aminoAcidList.add(aab);
         }
         request.setAttribute("amino_acids", aminoAcidList);
-        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("knowledge.jsp");
         view.forward(request, response);
     }
 

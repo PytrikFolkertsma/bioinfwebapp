@@ -32,7 +32,7 @@ $(function() {
         $('#dialog').html('<h4>'+trid+'</h4>'+aminoacidDict[trid]);
         $('#dialog').dialog({
             maxHeight: 550,
-            width: 250}
+            width: 300}
         );
      });
      //http://stackoverflow.com/questions/8661501/datatables-i-cant-call-an-onclick-event-after-i-paginate

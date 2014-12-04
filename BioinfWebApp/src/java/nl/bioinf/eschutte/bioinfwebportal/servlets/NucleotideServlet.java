@@ -7,7 +7,6 @@
 package nl.bioinf.eschutte.bioinfwebportal.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -44,8 +43,8 @@ public class NucleotideServlet extends HttpServlet {
             nb.setBase(nuc.getBase());
             nucleotideList.add(nb);
         }
-        request.setAttribute("nucleotides", nucleotideList);
-        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+        request.setAttribute("nucleotides", nucleotideList); 
+        RequestDispatcher view = request.getRequestDispatcher("knowledge.jsp");
         view.forward(request, response);
     }
 

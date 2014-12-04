@@ -39,11 +39,11 @@
 
                     <div id="tabs">
                         <ul>
-                            <li><a href="#tabs-1">Amino Acids</a></li>
-                            <li><a href="#tabs-2">Second</a></li>
+                            <li><a href="#tabs-1">IUPAC</a></li>
+                            <li><a href="#tabs-2">Amino Acids</a></li>
                             <li><a href="#tabs-3">Third</a></li>
                         </ul>
-                        <div id="tabs-1">
+                        <div id="tabs-2">
                             <table id="report" width="100%">
                                        <thead>
                                            <tr>
@@ -232,11 +232,42 @@
                                    </table>
                                    <div id="dialog" title="Additional information"></div>
                         </div>
-                      
+                         
+                        <div id="tabs-1">
+                            <c:choose>
+                                <c:when test="${(empty requestScope.nucleotides) && (empty requestScope.amino_acids)}">
+                                    Please select an option:
+                                    <form name="Nucleotides" action="NucleotideServlet.do">
+                                        <input type="submit" value="Fetch IUPAC Nucleotide Codes" name="Nucleotides" />
+                                    </form>
+                                    <form name="AminoAcids" action="say-hello.do">
+                                        <input type="submit" value="Fetch IUPAC AminoAcid Codes" name="AminoAcids" />
+                                    </form>
+                                </c:when>
+                            </c:choose>
+                            <c:if test='${not empty "${records}"}'>
+                                <table>
+                                    <tr>
+                                        <th>Nucleotide Code</th>
+                                        <th>Base</th>
+                                    </tr>
+                                    <tr>
+                                        <c:forEach var="nuc" items="${requestScope.nucleotides}">
+                                            <td>${nuc.name}</td>
+                                            <td>${nuc.base}</td>
+                                    </tr>
+                                    </c:forEach>
+                                    <tr>
+                                        <td>'-' & '.'</td>
+                                        <td> means gap</td>
+                                    </tr>
+                                </table>
+                                <form><input type="button" value="Back" onClick="history.go(-1);return true;">
+                            </c:if>
 
-                            
-                            
-                        <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+
+
+                        </div>
                         <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
                     </div>
                 </div>
