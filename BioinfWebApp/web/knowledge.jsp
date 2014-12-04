@@ -449,7 +449,66 @@
                                         </tr>
                                 </table>
                         </div>
-                        <div id="tabs-4"></div>
+                        <div id="tabs-4">
+                            <table id="blast" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th><h6>BLAST program</h6></th>
+                                        <th><h6>E value</h6></th>
+                                        <th><h6>Word size</h6></th>
+                                        <th><h6>Gap open</h6></th>
+                                        <th><h6>Gap extend</h6></th>
+                                        <th><h6>Default Matrix</h6></th>
+                                    </tr>
+                                </thead>
+
+                                <tr id="blastn" class="dialog">
+                                    <td>BLASTN</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>No default</td>
+                                </tr>
+
+                                <tr id="blastp" class="dialog">
+                                    <td>BLASTP</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>11</td>
+                                    <td>1</td>
+                                    <td>blosum62</td>
+                                </tr>
+
+                                <tr id="blastx" class="dialog">
+                                    <td>BLASTX</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>11</td>
+                                    <td>1</td>
+                                    <td>blosum62</td>
+                                </tr>
+
+                                <tr id="tblastn" class="dialog">
+                                    <td>TBLASTN</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>11</td>
+                                    <td>1</td>
+                                    <td>blosum62</td>
+                                </tr>
+
+                                <tr id="psiblast" class="dialog">
+                                    <td>PSI-BLAST</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>No default</td>
+                                </tr>
+                            </table>
+
+                        </div>
                         <div id="tabs-5">
                             <table id="nucs" width="100%">
                                        <thead>
@@ -480,7 +539,7 @@
                                            <div id="Guanine">
                                                <td class="dialog">Guanine</td>
                                                <td class="dialog">G</td>
-                                               <td class="dialog">DNA and RN</td>
+                                               <td class="dialog">DNA and RNA</td>
                                                <td class="dialog">151.13</td>
                                            </div>
                                        </tr>                                              
@@ -501,8 +560,8 @@
                                            </div>
                                        </tr>                                              
                                    </table>
-                        </div>
-                        
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>   
