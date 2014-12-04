@@ -40,7 +40,7 @@
                 <div id="accordion-1" class="accordion-section-content">
                     <p><b>Nucleotide quiz<br /></b>
                     This quiz contains 30 questions about nucleotides. The questions are randomized every time. <br />
-                    It contains questions about UIPAC codes, nucleotide structures, classes and amibiguity. <br />
+                    It contains questions about UIPAC codes, nucleotide structures, abbreviations, classes and amibiguity. <br />
                     This quiz includes drag and drop, multiple choice and open questions. In the end the score is calculated and you have a chance to join the leaderbord based on score and time!
                     So dig in and enhance your knowledge!
                     </p>
@@ -78,7 +78,7 @@
                 <div id="accordion-2" class="accordion-section-content">
                     <p><b>Amino acid quiz</b><br />
                         This quiz consists of 30 questions about amino acids, the questions are randomized every time <br />
-                        It contains questions about IUPAC codes, amino acid structures, abreviations and the amino acid coding table <br />
+                        It contains questions about IUPAC codes, amino acid structures, ambiguity, abbreviations and the amino acid coding table <br />
                         This quiz includes drag and drop, multiple choice and open questions. In the end the score is calculated and you have a chance to join the leaderbord based on score and time!
                         So dig in and enhance your knowledge!
                     </p>
