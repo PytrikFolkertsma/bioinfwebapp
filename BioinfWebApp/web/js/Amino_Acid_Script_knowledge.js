@@ -38,3 +38,13 @@ $(function() {
      //http://stackoverflow.com/questions/8661501/datatables-i-cant-call-an-onclick-event-after-i-paginate
      //http://datatables.net/forums/discussion/19513/datatable-can-t-select-rows-on-next-page
 });
+
+$(document).ready(function(){
+   $('#highlight tr').mouseover(function(){
+      $(this).addClass('hover');
+   });
+         
+   $('#highlight tr').mouseout(function(){
+      $(this).removeClass('hover');
+   });
+});

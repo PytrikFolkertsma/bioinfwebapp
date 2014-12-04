@@ -1105,3 +1105,23 @@ table.dataTable td {
     margin-top: 0.5em;
   }
 }
+
+.hover
+{
+    background: darkgrey;
+    color: black;
+}
+
+#highlight {
+   font-size: 14px;
+   margin: 1px;
+}
+
+#CodonTable{
+    width: 100%;
+    border-color: #DDD;
+}
+#CodonTable td {
+    border-color: #DDD;
+    font-size: 20px;
+}
