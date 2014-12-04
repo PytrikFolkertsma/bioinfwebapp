@@ -13,3 +13,4 @@
 <link href="css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
 <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
 <link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
