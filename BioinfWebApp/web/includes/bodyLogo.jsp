@@ -12,5 +12,6 @@
     </div>
     <div>
         <img src="images/hanze_logo.jpg" alt="logo" style="position: absolute; top: 0px;right: 0px;"/>
+        <p>Image source: <a href="http://www.stcorp.no/technology/bioinformatics/">stcorp</a></p>
     </div>
 </div>
