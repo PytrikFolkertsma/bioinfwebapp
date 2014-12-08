@@ -21,6 +21,16 @@ public enum AminoAcid {
             return "A";
         }
     },
+    ASPARAGINE_ASPARTATE {
+        @Override
+        public String getThreeLetterCode() {
+            return "Asx";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "B";
+        }
+    },
     CYSTEINE {
         @Override
         public String getThreeLetterCode() {
@@ -91,6 +101,16 @@ public enum AminoAcid {
             return "I";
         }
     },
+    LEUCINE_ISOLEUCINE {
+        @Override
+        public String getThreeLetterCode() {
+            return "Xle";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "J";
+        }
+    },
     LYSINE {
         @Override
         public String getThreeLetterCode() {
@@ -129,6 +149,16 @@ public enum AminoAcid {
         @Override
         public String getOneLetterCode() {
             return "N";
+        }
+    },
+    PYRROLYSINE {
+        @Override
+        public String getThreeLetterCode() {
+            return "Pyl";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "O";
         }
     },
     PROLINE {
@@ -181,6 +211,16 @@ public enum AminoAcid {
             return "T";
         }
     },
+    SELENOCYSTEINE {
+        @Override
+        public String getThreeLetterCode() {
+            return "Sec";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "U";
+        }
+    },
     VALINE {
         @Override
         public String getThreeLetterCode() {
@@ -201,6 +241,16 @@ public enum AminoAcid {
             return "W";
         }
     },
+    UNKOWN {
+        @Override
+        public String getThreeLetterCode() {
+            return "Xaa";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "X";
+        }
+    },
     TYROSINE{
         @Override
         public String getThreeLetterCode() {
@@ -209,6 +259,16 @@ public enum AminoAcid {
         @Override
         public String getOneLetterCode() {
             return "Y";
+        }
+    },
+    GLUTAMINE_GLUTAMATE{
+        @Override
+        public String getThreeLetterCode() {
+            return "Glx";
+        }
+        @Override
+        public String getOneLetterCode() {
+            return "Z";
         }
     };
     /**
