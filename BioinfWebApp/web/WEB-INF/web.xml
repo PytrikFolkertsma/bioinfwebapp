@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	 version="3.0">    
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>AminoAcidServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.AminoAcidServlet</servlet-class>
@@ -12,6 +8,10 @@
         <servlet-name>NucleotideServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.NucleotideServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MolecularWeightServlet</servlet-name>
+        <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.MolecularWeightServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AminoAcidServlet</servlet-name>
         <url-pattern>/say-hello.do</url-pattern>
@@ -19,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>NucleotideServlet</servlet-name>
         <url-pattern>/NucleotideServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MolecularWeightServlet</servlet-name>
+        <url-pattern>/MolecularWeightServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
