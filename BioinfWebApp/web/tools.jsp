@@ -36,7 +36,7 @@
                         <h3>Molecular Weight</h3>
                         <div>
                             <p>
-                                The Molecular Weight Calculator calculates the molecular mass of any nucleotide (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide multiplied by the number of nucleotide in the molecular formula.
+                                The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide multiplied by the number of nucleotides in the molecular formula.
                                 Place your FASTA data in the text field or upload a FASTA file.
                             </p>
                             

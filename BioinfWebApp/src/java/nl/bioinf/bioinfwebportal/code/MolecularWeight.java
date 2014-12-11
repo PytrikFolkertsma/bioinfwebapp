@@ -7,7 +7,6 @@ package nl.bioinf.bioinfwebportal.code;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -42,9 +41,9 @@ public class MolecularWeight {
         HashMap<String, String> fastaMap = new HashMap<String, String>();
         String sequence = "";
         String header = "";
-
 //                create a List with headers and sequences without \n
         List<String> seqList = Arrays.asList(userInput.split("\n"));
+
 //                loop through List
         for (String fastaElement : seqList) {
 //                    skip line if it's a header
@@ -53,11 +52,11 @@ public class MolecularWeight {
                 header = fastaElement;
             } else {
 //                        fill variable with sequences
-                sequence = sequence + fastaElement.toUpperCase() + "\n";
+                sequence = fastaElement.toUpperCase();
             }
+            fastaMap.put(header, sequence);
         }
 //                   get sequences and store them in a HashMap with its header
-        fastaMap.put(header, sequence);
 
         return fastaMap;
     }
@@ -75,7 +74,11 @@ public class MolecularWeight {
             String sequence = fasta.getValue();
             for (int i = 0; i < sequence.length(); i++) {
                 char c = sequence.charAt(i);
-                mw += MolecularWeight.molecularWeights.get(c);
+                try {
+                    mw += MolecularWeight.molecularWeights.get(c);
+                } catch (NullPointerException e) {
+                    c = 0;
+                }
             }
         }
         return mw;

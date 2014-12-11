@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package nl.bioinf.eschutte.bioinfwebportal.servlets;
 
 import java.io.IOException;
@@ -35,15 +34,12 @@ public class MolecularWeightServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+
         try {
             String userInput = request.getParameter("inputByText");
             MolecularWeight mw = new MolecularWeight();
             HashMap<String, String> map = mw.digestUserInput(userInput);
             double molMass = mw.calculateMolMass(map);
-            
-//            String molMass = mw.calculateMolMass(map);
-            
             request.setAttribute("test", molMass);
             RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
             view.forward(request, response);
