@@ -43,16 +43,18 @@ public class MolecularWeight {
         String header = "";
 //                create a List with headers and sequences without \n
         List<String> seqList = Arrays.asList(userInput.split("\n"));
-
 //                loop through List
         for (String fastaElement : seqList) {
 //                    skip line if it's a header
             if (fastaElement.contains(">")) {
+                if (!header.equals("")) {
+                    sequence = "";
+                }
 //                      when headers are found
-                header = fastaElement;
+                header = fastaElement.replace(">", "");
             } else {
 //                        fill variable with sequences
-                sequence = fastaElement.toUpperCase();
+                sequence += fastaElement.toUpperCase();
             }
             fastaMap.put(header, sequence);
         }
