@@ -35,13 +35,12 @@
                     <div id="accordion">
                         <h3>Molecular Weight</h3>
                         <div>
-                            <p>
-                                The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide in Dalton.
-                                Place your FASTA data in the text field or upload a FASTA file.
-                            </p>
-                            
                             <c:choose>
                                 <c:when test="${(empty requestScope.test)}">
+                                    <p>
+                                The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide in Dalton.
+                                Place your FASTA data in the text field or upload a FASTA file.
+                                    </p>
                                     <form action="MolecularWeightServlet.do" method="POST">
                                         <input type="file" size="50" name="file1"></input><br /><br />
                                         <select name="item">
@@ -54,7 +53,10 @@
                                 </c:when>
                             </c:choose>
                             <c:if test="${! empty requestScope.test}">
-                                <text>test="${requestScope.test}"</text>
+                                <c:forEach var="country" items="${test}">
+                                    FASTA header: ${country.key}  - Molecular Weight in Dalton: ${country.value} <br />
+                                </c:forEach>
+                                    <input type="button" value="Back" onClick="history.go(-1);return true;"></input>
                             </c:if>
                         </div>
                         <h3>Something</h3>
