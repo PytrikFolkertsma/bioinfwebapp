@@ -43,8 +43,13 @@
                             <c:choose>
                                 <c:when test="${(empty requestScope.test)}">
                                     <form action="MolecularWeightServlet.do" method="POST">
+                                        <input type="file" size="50" name="file1"></input><br /><br />
+                                        <select name="item">
+                                            <option value="Single">Single stranded</option>
+                                            <option value="Double">Double stranded</option>
+                                        </select><br /><br />
                                         <textarea name="inputByText" cols="50" placeholder="Copy/Paste your sequence data here..."></textarea>
-                                        <input type="submit"> Calculate Molecular Mass!</input>
+                                        <input type="submit" value="Submit"> Calculate Molecular Mass!</input>
                                     </form>
                                 </c:when>
                             </c:choose>
