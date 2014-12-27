@@ -59,8 +59,54 @@
                                     <input type="button" value="Back" onClick="history.go(-1);return true;"></input>
                             </c:if>
                         </div>
-                        <h3>Something</h3>
-                        <div>Phasellus mattis tincidunt nibh.</div>
+                        
+                        
+                        
+                         <h3>Oligo Creator</h3>
+                        <div>
+                            
+                              
+
+                            <c:choose>
+                                <c:when test="${(empty requestScope.message)}">
+
+                                    <p>This tool creates oligos from a given fasta file.</p>
+                                    <b>Upload a file</b><br /> 
+
+                                    <form action="createoligos.do" method="post" enctype="multipart/form-data">
+
+                                        <input type="file" name="fileName" />
+
+                                        <br /><br />
+                                        <b>Filter for</b><br />
+
+                                        <input type="checkbox" name="monorepeats" value="monorepeats" /> no mononucleotide repeats <br />
+                                        <input type="checkbox" name="direpeats" value="direpeats" /> no mononucleotide repeats<br />
+                                        <input type="checkbox" name="hairpins" value="hairpins" /> no hairpins<br /><br />
+
+                                        <label for="temperature">Melting temperature between:</label>
+                                        <input name="temperature" type="text" id="temperature" readonly style="border:0; color:#000000; font-weight:bold;" />
+                                        <div id="slider-range"></div>
+
+                                        <br />
+                                        <label for="size">Size oligos of</label>
+                                        <input name="size" type="text" id="size" readonly style="border:0; color:#000000; font-weight:bold;" />
+                                        <div id="slider"></div>
+
+                                        <br />
+                                        <input type="submit" value="Submit">
+
+
+                                    </form>
+                                </c:when>
+                            </c:choose>
+                            <c:if test="${! empty requestScope.message}">
+                                ${requestScope.message}
+                            </c:if>  
+
+                        </div>
+
+                        
                         <h3>Something</h3>
                         <div>Nam dui erat, auctor a, dignissim quis.</div>
                     </div>
