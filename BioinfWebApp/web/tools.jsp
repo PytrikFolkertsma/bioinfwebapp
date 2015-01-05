@@ -40,7 +40,7 @@
                                 <c:when test="${(empty requestScope.test)}">
                                     <p>
                                         The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide in Dalton.
-                                        Place your FASTA data in the text field or upload a FASTA file.
+                                        Place your FASTA data in the text field.
                                     </p>
                                     <form action="MolecularWeightServlet.do" method="POST">
                                         <!--<input type="file" size="50" name="file1"></input><br /><br />-->
@@ -107,37 +107,37 @@
                         <h3>DNA translator</h3>
                         <div>
                             <form name="dna_sequence_text" method="POST" action="Translating.do">
-                                <textarea name="sequence_input" rows="15" cols="60">
-                                    GGTTTCGCTGACGAACCTCCAGACCCTTTACCTCGACAAAAGCAGCGTCGAAGACTATTC
-                                    ATCCCTCGAAAACATCTACACCACCCTCGCCAACAAAGATTTTATCATTCCTACCACACT
-                                    TAAAGACCTTGGATTCAACCTTGATCCCAACAATCACGAAGCTTACTTCGAAAGCGAGTT
-                                    AGCCAATTTCACCGTTACCCATGACCAGTGGGGGCCGCCATCCAGGGAAGACAACCAGAA
-                                    TATCATCCGCATGACCCTGTACCTGAATGATGAATACAAAACCTCTATTGGTTACTATGA
-                                    CGTACACAAGGTTTACCTCTGCCAAATGGATAAGGAAGGCCAGCCACCCGTGAACTACCT
-                                    CTACGACATCGCCACTGGCGAATATTCCATCGATGGGCAGGATCGGACGAACTCAGAACA
-                                    GATGATCCGTGCCGCCTTGGAAGTTGAAAATGGCGAAGATCCGCTGTATGCACCCATCCG
-                                    CTTCTTTAATGAAACCATTCGGAACACCTTCAAAATGACCCCCGAAAAATTGTTCACATT
-                                    GCCGTATGAACCACCGACCCTCAAGAGTCTGGGCTTTGTCCCAGACGAGACCCCCGGGAT
-                                    TTATATGTATGAGCAGCACGAAGGCATCTATACCAACATCCGCATCGACCACAACGAAAA
-                                    AGAAAATAAGGAATATGATGTCGTATTTTTTCAACCGATTACTGACGTTTACCGCGTAAA
-                                    CTTGTTCTATCACACAACCGACAACAAACTATTTGTTGGCGCCGACGATAATTACAACGG
-                                    TGGGGCAAGTTTTTACTATTATCTGGATACCGGCGAACACATCGATGAATGGTGCAGCGA
-                                    TCCTGACATGACCGTGGAAGAATACTTCATCAAAGCTTACAACGATCCCGCGATCGAGGA
-                                    TGTTTACCAGCATTCCATGAATTTAATGGTGCAATACATTCGTGATACCTTTGGTATGAC
-                                    GATCGAGGAGCTGTATTCTCTGCCGACAGGTGAATAAGGATTAAAGGGTGTCAACGAGAC
-                                    CCGTAAGGCAAGATGACATTAGGTCAAGTACAAATGGGTAATCTTGAAAATTGATGAC
-                                </textarea>
-                                </br>
-                                <select name ="frames" id="frames">
-                                    <option>frame 1</option>
-                                    <option>frame 2</option>
-                                    <option>frame 3</option>
-                                    <option>frame 4</option>
-                                    <option> frame 5</option>
-                                    <option>frame 6</option>
-                                </select>
-                                <input type="submit" value= "Translate sequence"/>
-                            </form>
+            <textarea name="sequence_input" rows="15" cols="60">
+GGTTTCGCTGACGAACCTCCAGACCCTTTACCTCGACAAAAGCAGCGTCGAAGACTATTC
+ATCCCTCGAAAACATCTACACCACCCTCGCCAACAAAGATTTTATCATTCCTACCACACT
+TAAAGACCTTGGATTCAACCTTGATCCCAACAATCACGAAGCTTACTTCGAAAGCGAGTT
+AGCCAATTTCACCGTTACCCATGACCAGTGGGGGCCGCCATCCAGGGAAGACAACCAGAA
+TATCATCCGCATGACCCTGTACCTGAATGATGAATACAAAACCTCTATTGGTTACTATGA
+CGTACACAAGGTTTACCTCTGCCAAATGGATAAGGAAGGCCAGCCACCCGTGAACTACCT
+CTACGACATCGCCACTGGCGAATATTCCATCGATGGGCAGGATCGGACGAACTCAGAACA
+GATGATCCGTGCCGCCTTGGAAGTTGAAAATGGCGAAGATCCGCTGTATGCACCCATCCG
+CTTCTTTAATGAAACCATTCGGAACACCTTCAAAATGACCCCCGAAAAATTGTTCACATT
+GCCGTATGAACCACCGACCCTCAAGAGTCTGGGCTTTGTCCCAGACGAGACCCCCGGGAT
+TTATATGTATGAGCAGCACGAAGGCATCTATACCAACATCCGCATCGACCACAACGAAAA
+AGAAAATAAGGAATATGATGTCGTATTTTTTCAACCGATTACTGACGTTTACCGCGTAAA
+CTTGTTCTATCACACAACCGACAACAAACTATTTGTTGGCGCCGACGATAATTACAACGG
+TGGGGCAAGTTTTTACTATTATCTGGATACCGGCGAACACATCGATGAATGGTGCAGCGA
+TCCTGACATGACCGTGGAAGAATACTTCATCAAAGCTTACAACGATCCCGCGATCGAGGA
+TGTTTACCAGCATTCCATGAATTTAATGGTGCAATACATTCGTGATACCTTTGGTATGAC
+GATCGAGGAGCTGTATTCTCTGCCGACAGGTGAATAAGGATTAAAGGGTGTCAACGAGAC
+CCGTAAGGCAAGATGACATTAGGTCAAGTACAAATGGGTAATCTTGAAAATTGATGAC
+            </textarea>
+            </br>
+            <select name ="frames" id="frames">
+                <option value="-3">frame 1</option>
+                <option value="-2">frame 2</option>
+                <option value="-1">frame 3</option>
+                <option value="0">frame 4</option>
+                <option value="1">frame 5</option>
+                <option value="2">frame 6</option>
+            </select>
+            <input type="submit" value= "Translate sequence"/>
+        </form>
 
                         </div>
                         

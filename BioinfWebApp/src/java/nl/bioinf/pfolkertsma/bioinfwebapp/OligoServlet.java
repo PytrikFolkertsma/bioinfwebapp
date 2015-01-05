@@ -6,15 +6,6 @@
 
 package nl.bioinf.pfolkertsma.bioinfwebapp;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 
 /**
  *
@@ -24,11 +15,8 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
-  
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -58,6 +46,8 @@ public class OligoServlet extends HttpServlet {
        
         
         String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
+        
+        
         
         File fileSaveDir = new File(uploadFilePath);
         if (!fileSaveDir.exists()) {
@@ -92,16 +82,17 @@ public class OligoServlet extends HttpServlet {
         Input.setSize(size);        
               
         OligoCreator oc = new OligoCreator();
-        
+         
         oc.setPathFastafile(path);
         oc.parseFastafile();
         oc.writeOligosToFasta(oligoPath);
      
         
+        
         File downloadFile = new File(oligoPath);
         FileInputStream inStream = new FileInputStream(downloadFile);
         ServletContext context = getServletContext();
-        
+       
         String mimeType = context.getMimeType(oligoPath);
         if (mimeType == null) {        
             // set to binary type if MIME mapping not found

@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "TranslatingServlet", urlPatterns = {"/Translating.do"})
 public class TranslatingServlet extends HttpServlet {
     private static Map<String, String> aminoAcidCodons;
-   
+
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

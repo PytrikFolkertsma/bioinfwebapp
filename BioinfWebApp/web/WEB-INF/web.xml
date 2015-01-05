@@ -4,7 +4,7 @@
         <servlet-name>AminoAcidServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.AminoAcidServlet</servlet-class>
     </servlet>
-    <servlet>
+     <servlet>
         <servlet-name>NucleotideServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.NucleotideServlet</servlet-class>
     </servlet>
