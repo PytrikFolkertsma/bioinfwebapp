@@ -26,6 +26,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
   
 import javax.servlet.ServletException;
@@ -55,6 +56,7 @@ public class OligoServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
        
+        
         String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
         
         File fileSaveDir = new File(uploadFilePath);
@@ -64,6 +66,7 @@ public class OligoServlet extends HttpServlet {
 
         Part file = request.getPart("fileName");
         String fileName = getFileName(file);
+        
         file.write(uploadFilePath + File.separator + fileName);
         
         String path = uploadFilePath + File.separator + fileName;

@@ -18,81 +18,65 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * OligoCreator class. Creates an OligoCreator object.
  * @author pfolkertsma
  */
 public class OligoCreator {
-
+    /**
+     * A Path object which contains the path to the given fasta file.
+     */
     private Path pathFastafile;
-
-    private String fileLines;
+    /**
+     * A string array which contains the descriptions of the sequences from the fasta file.
+     */
     private String[] descriptions;
+    /**
+     * A string array which contains the sequences of the fasta file.
+     */
     private String[] sequences;
-
-
+    /**
+     * This method sets the parameter pathFastafile.
+     * @param path a string of the path to the fasta file.
+     */
     public void setPathFastafile(String path){
         pathFastafile = Paths.get(path);
     }
-
+    /**
+     * This method creates the oligos from the sequences and writes them to a fasta file.
+     * @param oligoPath the path for the new file with oligos.
+     */
     public void writeOligosToFasta(String oligoPath) {
         try {
             Path file = Paths.get(oligoPath);
-            
             BufferedWriter output = Files.newBufferedWriter(file, Charset.defaultCharset());
             int i = 0;
-
             for (String seq : sequences) {
                 for (int index = 0; index < seq.length() - (Input.getSize()-1); index++) {
                     Oligo oligo = new Oligo();
                     oligo.sequence = seq.substring(index, index + Input.getSize()).toUpperCase();
-                    
-                    /*
-                    if (Input.isMonoRepeats() && oligo.checkMonoRepeats()) {continue;}
-                    if (Input.isDiRepeats() && oligo.checkDiRepeats()) {continue;}
-                    if (Input.isHairpins() && oligo.checkHairpin()) {continue;}
-                    */ 
-                    
-                    if (oligo.calculateMeltingTemp() > Input.getMinTemp()
-                            && oligo.calculateMeltingTemp() < Input.getMaxTemp()
-                            && oligo.checkNucleotides(oligo.sequence)) {
-
-                        String enter = System.getProperty("line.separator");
-                        output.write(descriptions[i] + "|oligo" + (index + 1)
-                                + "|Mono:" + oligo.checkMonoRepeats()
-                                + "|Di:" + oligo.checkDiRepeats()
-                                + "|Hairpin:" + oligo.checkHairpin()
-                                + "|Temp:" + oligo.calculateMeltingTemp()
-                                + enter + oligo.sequence + enter);
+                    if (oligo.calculateMeltingTemp() > Input.getMinTemp() && oligo.calculateMeltingTemp() < Input.getMaxTemp() && oligo.checkNucleotides()) {
+                        output.write(descriptions[i] + "|oligo" + (index + 1) + System.getProperty("line.separator") + oligo.sequence + System.getProperty("line.separator"));
                     }
                 }
             }
             output.close();
         } catch (IOException e) {
         }
-
     }
-
+    /**
+     * This method parses the fasta file: it creates a string array of the descriptions and a string array of the sequences.
+     */
     public void parseFastafile() {
         List desc = new ArrayList();
         List seq = new ArrayList();
-
         try {
             BufferedReader reader;
             reader = Files.newBufferedReader(pathFastafile, Charset.defaultCharset());
-
             StringBuffer buffer = new StringBuffer();
-
             String line = reader.readLine();
-
-            if (line == null) {
-                throw new IOException(pathFastafile + " is an empty file");
-            }
-            if (line.charAt(0) != '>') {
-                throw new IOException("First line of " + pathFastafile + " should start with '>'");
-            } else {
+             if (line != null && line.charAt(0) == '>'){
                 desc.add(line);
             }
-
             for (line = reader.readLine().trim(); line != null; line = reader.readLine()) {
                 if (line.length() > 0 && line.charAt(0) == '>') {
                     seq.add(buffer.toString());
@@ -109,7 +93,6 @@ public class OligoCreator {
             System.out.println("Error when reading " + pathFastafile);
             e.printStackTrace();
         }
-
         descriptions = new String[desc.size()];
         sequences = new String[seq.size()];
         for (int i = 0; i < seq.size(); i++) {
@@ -117,5 +100,4 @@ public class OligoCreator {
             sequences[i] = (String) seq.get(i);
         }
     }
-
 }
