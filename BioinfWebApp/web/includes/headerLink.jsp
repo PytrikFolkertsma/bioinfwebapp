@@ -1,7 +1,7 @@
 <%-- 
     Document   : headerLink
     Created on : 23-nov-2014, 19:43:59
-    Author     : salbassam
+    Author     : pfolkertsma, salbassam
 --%>
 
 <meta charset="utf-8">

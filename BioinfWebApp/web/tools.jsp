@@ -28,7 +28,9 @@
             <div id="site_content">
                 <div id="top_border"></div>
                 <div class="image">
-                    <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
+                    <a href="http://www.stcorp.no/technology/bioinformatics/" target="_blank">
+         <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
+         </a>
                 </div>
 
                 <div class="content">

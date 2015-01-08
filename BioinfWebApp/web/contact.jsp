@@ -1,7 +1,7 @@
 <%-- 
     Document   : contact
     Created on : Nov 27, 2014, 1:58:31 PM
-    Author     : pfolkertsma
+    Author     : pfolkertsma, salbassam
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,7 +25,9 @@
             <div id="site_content">
                 <div id="top_border"></div>
                 <div class="image">
-                    <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
+                    <a href="http://www.stcorp.no/technology/bioinformatics/" target="_blank">
+         <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
+         </a>
                 </div>
                 <div id="sidebar_container">
                     <img class="paperclip" src="images/paperclip.png" alt="paperclip" />

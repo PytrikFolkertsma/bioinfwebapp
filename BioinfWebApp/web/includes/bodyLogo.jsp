@@ -1,7 +1,7 @@
 <%-- 
     Document   : bodyLogo
     Created on : 23-nov-2014, 19:48:46
-    Author     : salbassam
+    Author     : pfolkertsma, salbassam
 --%>
 
 <div id="logo">
@@ -11,7 +11,6 @@
         <h2>Institute for Life Science and Technology</h2>
     </div>
     <div>
-        <img src="images/hanze_logo.jpg" alt="logo" style="position: absolute; top: 0px;right: 0px;"/>
-        <p>Image source: <a href="http://www.stcorp.no/technology/bioinformatics/">stcorp</a></p>
+        <img src="images/hanze_logo.jpg"  alt="logo" style="position: absolute; top: 0px;right: 0px;" />
     </div>
 </div>

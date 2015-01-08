@@ -1,7 +1,7 @@
 <%-- 
     Document   : headerScript
     Created on : 23-nov-2014, 19:44:14
-    Author     : salbassam
+    Author     : pfolkertsma, salbassam
 --%>
 <!-- modernizr enables HTML5 elements and feature detects -->
 <!-- javascript at the bottom for fast page loading -->
