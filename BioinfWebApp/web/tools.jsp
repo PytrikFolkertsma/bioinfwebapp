@@ -45,7 +45,7 @@
                                         Place your FASTA data in the text field.
                                     </p>
                                     <form action="MolecularWeightServlet.do" method="POST">
-                                        <!--<input type="file" size="50" name="file1"></input><br /><br />-->
+                                        <input type="file" name="fileName" id="file" /><br /><br />
                                         <select name="item">
                                             <option value="Single">Single stranded</option>
                                             <option value="Double">Double stranded</option>

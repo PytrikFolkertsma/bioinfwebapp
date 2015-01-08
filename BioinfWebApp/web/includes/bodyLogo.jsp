@@ -11,6 +11,8 @@
         <h2>Institute for Life Science and Technology</h2>
     </div>
     <div>
-        <img src="images/hanze_logo.jpg"  alt="logo" style="position: absolute; top: 0px;right: 0px;" />
+        <a href="https://www.hanze.nl/" target="_blank">
+        <img src="images/hlogo1.png"  alt="logo" style="position: absolute; top: 0px;right: 0px;" />
+        </a>
     </div>
 </div>
