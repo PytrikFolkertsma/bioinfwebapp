@@ -5,6 +5,12 @@
  */
 package nl.bioinf.bioinfwebportal.code;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -22,6 +28,16 @@ import java.util.Map;
  */
 public class MolecularWeight {
 
+    private Path pathFastafile;
+    /**
+     * A string array which contains the descriptions of the sequences from the
+     * fasta file.
+     */
+    private String[] descriptions;
+    /**
+     * A string array which contains the sequences of the fasta file.
+     */
+    private String[] sequences;
     /**
      * Create Molecular Weights map.
      */
@@ -36,6 +52,10 @@ public class MolecularWeight {
         MolecularWeight.molecularWeights.put('G', 174.2017);
         MolecularWeight.molecularWeights.put('C', 131.1736);
         MolecularWeight.molecularWeights.put('U', 112.08676);
+    }
+
+    public void setPathFastafile(String path) {
+        pathFastafile = Paths.get(path);
     }
 
     /**
@@ -70,6 +90,48 @@ public class MolecularWeight {
 //                   get sequences and store them in a HashMap with its header
 
         return fastaMap;
+    }
+    public void convertToHashMap(){
+        Map<String, String> fastaFormat = new HashMap<String, String>();
+        for (int i = 0; i < descriptions.length; i++) {
+            String header = descriptions[i];
+            String seq = sequences[i];
+            fastaFormat.put(header, seq);
+        }
+    }
+    public void parseFastafile() {
+        List desc = new ArrayList();
+        List seq = new ArrayList();
+        try {
+            BufferedReader reader;
+            reader = Files.newBufferedReader(pathFastafile, Charset.defaultCharset());
+            StringBuffer buffer = new StringBuffer();
+            String line = reader.readLine();
+            if (line != null && line.charAt(0) == '>') {
+                desc.add(line);
+            }
+            for (line = reader.readLine().trim(); line != null; line = reader.readLine()) {
+                if (line.length() > 0 && line.charAt(0) == '>') {
+                    seq.add(buffer.toString());
+                    buffer = new StringBuffer();
+                    desc.add(line);
+                } else {
+                    buffer.append(line.trim());
+                }
+            }
+            if (buffer.length() != 0) {
+                seq.add(buffer.toString());
+            }
+        } catch (IOException e) {
+            System.out.println("Error when reading " + pathFastafile);
+            e.printStackTrace();
+        }
+        descriptions = new String[desc.size()];
+        sequences = new String[seq.size()];
+        for (int i = 0; i < seq.size(); i++) {
+            descriptions[i] = (String) desc.get(i);
+            sequences[i] = (String) seq.get(i);
+        }
     }
 
     /**

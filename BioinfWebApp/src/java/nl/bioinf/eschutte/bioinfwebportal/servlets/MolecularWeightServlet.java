@@ -5,21 +5,30 @@
  */
 package nl.bioinf.eschutte.bioinfwebportal.servlets;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import nl.bioinf.bioinfwebportal.code.MolecularWeight;
 
 /**
  *
  * @author salbassam
  */
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10, // 10 MB
+        maxFileSize = 1024 * 1024 * 50, // 50 MB
+        maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 public class MolecularWeightServlet extends HttpServlet {
+
+    private static final String UPLOAD_DIR = "files";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,40 +42,71 @@ public class MolecularWeightServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-//        PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
         MolecularWeight mw = new MolecularWeight();
+        String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
+
+        File fileSaveDir = new File(uploadFilePath);
+        if (!fileSaveDir.exists()) {
+            fileSaveDir.mkdirs();
+        }
+
+        Part file = request.getPart("fileName");
+        String fileName = getFileName(file);
         try {
-//          get userinput of type FASTA
-            String userInput = request.getParameter("inputByText");
-            String strandType = "";
+            if (fileName.equals("")) {
+                String userInput = request.getParameter("inputByText");
+                //            String userInput = request.getParameter("inputByText");
+                String strandType = "";
 //          Create HashMap for userinput
-            HashMap<String, String> fastaMap = null;
+                HashMap<String, String> fastaMap = null;
 //          Create HashMap for the Mol Mass results per header
-            Map<String, Double> resultMolMassMap = null;
+                Map<String, Double> resultMolMassMap = null;
 //          select sequence strand type for further process
-            if (request.getParameter("item") != null) {
-                strandType = request.getParameter("item");
-            }
+                if (request.getParameter("item") != null) {
+                    strandType = request.getParameter("item");
+                }
 //          when Double stranded is selected the following is being processed
-            if (strandType.equals("Double")) {
-                fastaMap = mw.digestUserInput(userInput);
-                Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
-                Map<String, String> doubleStrandMap = mw.getDoubleStrand((HashMap<String, String>) convertedSequenceMap);
-                resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) doubleStrandMap);
-            } else {
+                if (strandType.equals("Double")) {
+                    fastaMap = mw.digestUserInput(userInput);
+                    Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
+                    Map<String, String> doubleStrandMap = mw.getDoubleStrand((HashMap<String, String>) convertedSequenceMap);
+                    resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) doubleStrandMap);
+                } else {
 //          when Default (Single stranded) is selected for further process
-                fastaMap = mw.digestUserInput(userInput);
-                Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
-                resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) convertedSequenceMap);
-            }
-//            Testing results to frontend
-            request.setAttribute("test", resultMolMassMap);
+                    fastaMap = mw.digestUserInput(userInput);
+                    Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
+                    resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) convertedSequenceMap);
+                }
+                request.setAttribute("test", resultMolMassMap);
+                //            Testing results to frontend
             RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
             view.forward(request, response);
+            } else {
+                file.write(uploadFilePath + File.separator + fileName);
+                String path = uploadFilePath + File.separator + fileName;
+                mw.setPathFastafile(path);
+                
+            }
+
+
         } catch (IOException e) {
             System.out.println("Something went wrong with the input or output:\t" + e);
 //            out.close();
+
         }
+    }
+
+    private String getFileName(Part part) {
+        String contentDisp = part.getHeader("content-disposition");
+        System.out.println("content-disposition header= " + contentDisp);
+        String[] tokens = contentDisp.split(";");
+        for (String token : tokens) {
+            if (token.trim().startsWith("filename")) {
+                return token.substring(token.indexOf("=") + 2, token.length() - 1);
+            }
+        }
+        return "";
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
