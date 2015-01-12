@@ -4,13 +4,13 @@
         <servlet-name>AminoAcidServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.AminoAcidServlet</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>NucleotideServlet</servlet-name>
         <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.NucleotideServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>MolecularWeightServlet</servlet-name>
-        <servlet-class>nl.bioinf.eschutte.bioinfwebportal.servlets.MolecularWeightServlet</servlet-class>
+        <servlet-class>nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator.MolecularWeightServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AminoAcidServlet</servlet-name>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nl.bioinf.eschutte.bioinfwebportal.servlets;
+package nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import nl.bioinf.bioinfwebportal.code.MolecularWeight;
+import nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator.MolecularWeight;
 
 /**
  *
@@ -80,15 +80,39 @@ public class MolecularWeightServlet extends HttpServlet {
                 }
                 request.setAttribute("test", resultMolMassMap);
                 //            Testing results to frontend
-            RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
-            view.forward(request, response);
+                RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
+                view.forward(request, response);
             } else {
                 file.write(uploadFilePath + File.separator + fileName);
                 String path = uploadFilePath + File.separator + fileName;
                 mw.setPathFastafile(path);
-                
+                mw.parseFastafile();
+                String strandType = "";
+//          Create HashMap for userinput
+                HashMap<String, String> fastaMap = null;
+//          Create HashMap for the Mol Mass results per header
+                Map<String, Double> resultMolMassMap = null;
+//          select sequence strand type for further process
+                if (request.getParameter("item") != null) {
+                    strandType = request.getParameter("item");
+                }
+//          when Double stranded is selected the following is being processed
+                if (strandType.equals("Double")) {
+                    fastaMap = mw.convertToHashMap();
+                    Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
+                    Map<String, String> doubleStrandMap = mw.getDoubleStrand((HashMap<String, String>) convertedSequenceMap);
+                    resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) doubleStrandMap);
+                } else {
+//          when Default (Single stranded) is selected for further process
+                    fastaMap = mw.convertToHashMap();
+                    Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
+                    resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) convertedSequenceMap);
+                }
+                request.setAttribute("test", resultMolMassMap);
+                //            Testing results to frontend
+                RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
+                view.forward(request, response);
             }
-
 
         } catch (IOException e) {
             System.out.println("Something went wrong with the input or output:\t" + e);

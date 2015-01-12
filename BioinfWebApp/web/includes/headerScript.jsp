@@ -16,4 +16,3 @@
 <script src="js/jquery-ui.js" type="text/javascript"></script>
 <script src="js/jQueryElements.js" type="text/javascript"></script>
 <script src="js/slider.js" type="text/javascript"></script>
-<script src="js/oligoCheck.js" type="text/javascript"></script>

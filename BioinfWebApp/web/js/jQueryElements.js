@@ -31,6 +31,6 @@ $(document).ready(
             });
             $("#size").val($("#slider").slider("value") + " nucleotides");
             $(document).tooltip();
-
+    
         }
 );

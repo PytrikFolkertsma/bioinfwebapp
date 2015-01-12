@@ -6,19 +6,11 @@
 
 
 function checkFields(){
-  var file = document.getElementById('file').value; 
-
+  var file = document.forms["oligoform"]["fileName"].value; 
   if (file === ""){
     alert("Please upload a fasta file!");
   }
   else{
       document.getElementById("oligoform").submit();
   }
-}
-
-function getServerData() {
-    var url = "tweet.me";
-    $.get(url, function(data) {
-        $("#tweets").append(data);
-    });
 }

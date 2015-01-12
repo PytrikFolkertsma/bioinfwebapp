@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nl.bioinf.bioinfwebportal.code;
+package nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -91,13 +91,14 @@ public class MolecularWeight {
 
         return fastaMap;
     }
-    public void convertToHashMap(){
-        Map<String, String> fastaFormat = new HashMap<String, String>();
+    public HashMap<String, String> convertToHashMap(){
+        HashMap<String, String> fastaFormat = new HashMap<String, String>();
         for (int i = 0; i < descriptions.length; i++) {
             String header = descriptions[i];
             String seq = sequences[i];
             fastaFormat.put(header, seq);
         }
+        return fastaFormat;
     }
     public void parseFastafile() {
         List desc = new ArrayList();

@@ -75,9 +75,9 @@
 
                             <b>Upload a file</b><br />
 
-                            <form id="oligoform" action="createoligos.do" method="post" enctype="multipart/form-data">
+                            <form name="oligoform" id="oligoform" action="createoligos.do" method="post" enctype="multipart/form-data">
 
-                                <input type="file" class="filebrowse" name="fileName" id="file" />
+                                <input type="file" class="filebrowse" name="fileName" id="file"/>
 
 
                                 <br /><br />
@@ -150,13 +150,11 @@
 
                             <c:choose>
                                 <c:when test="${(empty requestScope.output)}">
-                                    <form action="reversedcomplement.do" method="POST">
+                                    <form action="reversedcomplement.do" method="POST" enctype="multipart/form-data">
                                         <br /><b>Upload your fasta file</b><br />
                                         <input type="file" name="reversedComplementFile" id="reversedComplementFile" /><br /><br />
                                         Or paste your sequence data in the text field.
 
-
-                                        <!--<input type="file" size="50" name="file1"></input><br /><br />-->
 
                                         <textarea name="inputByText" cols="50" placeholder="Copy/Paste your sequence data here..."></textarea>
                                         <br /><br /><input type="submit" value="Download reversed complement"></input>
