@@ -91,7 +91,8 @@ public class MolecularWeight {
 
         return fastaMap;
     }
-    public HashMap<String, String> convertToHashMap(){
+
+    public HashMap<String, String> convertToHashMap() {
         HashMap<String, String> fastaFormat = new HashMap<String, String>();
         for (int i = 0; i < descriptions.length; i++) {
             String header = descriptions[i];
@@ -100,6 +101,7 @@ public class MolecularWeight {
         }
         return fastaFormat;
     }
+
     public void parseFastafile() {
         List desc = new ArrayList();
         List seq = new ArrayList();
@@ -125,7 +127,6 @@ public class MolecularWeight {
             }
         } catch (IOException e) {
             System.out.println("Error when reading " + pathFastafile);
-            e.printStackTrace();
         }
         descriptions = new String[desc.size()];
         sequences = new String[seq.size()];
@@ -211,19 +212,4 @@ public class MolecularWeight {
         return testmap;
     }
 
-    /**
-     * NOTE: still under construction.
-     *
-     * @param countAmbiguity
-     * @param nucleotide
-     * @return
-     */
-    private double calculateMolMassOfAmbiguity(int countAmbiguity, char nucleotide) {
-        Map<String, ArrayList<Double>> ambiguityMolMassMap = new HashMap<String, ArrayList<Double>>();
-//        char nucleotide = ambiguity letter as KEY
-//        arraylist of possible mol mass of ambiguity letter as VALUE
-        ArrayList<Double> molMassList = new ArrayList<Double>();
-
-        return 0;
-    }
 }

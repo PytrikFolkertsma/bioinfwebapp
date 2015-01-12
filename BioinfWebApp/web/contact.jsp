@@ -25,9 +25,7 @@
             <div id="site_content">
                 <div id="top_border"></div>
                 <div class="image">
-                    <a href="http://www.stcorp.no/technology/bioinformatics/" target="_blank">
-         <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
-         </a>
+                    <%@include file="./includes/bodyWebImage.jsp" %>
                 </div>
                 <div id="sidebar_container">
                     <img class="paperclip" src="images/paperclip.png" alt="paperclip" />

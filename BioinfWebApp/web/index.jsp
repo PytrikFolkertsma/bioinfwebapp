@@ -1,7 +1,7 @@
 <%-- 
     Document   : bioinfHomePage
     Created on : 23-nov-2014, 18:47:44
-    Author     : Asus
+    Author     : pfolkertsma, salbassam
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,7 +25,7 @@
     <div id="site_content">
 	  <div id="top_border"></div>
       <div class="image">
-         <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
+         <%@include file="./includes/bodyWebImage.jsp" %>
       </div>
       <div id="sidebar_container">
 	    <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
