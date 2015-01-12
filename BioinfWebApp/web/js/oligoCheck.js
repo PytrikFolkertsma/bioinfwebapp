@@ -5,15 +5,13 @@
  */
 
 
-function checkFields(){
-  var file = document.getElementById('file').value; 
+$(document).ready(initialize);
 
-  if (file === ""){
-    alert("Please upload a fasta file!");
-  }
-  else{
-      document.getElementById("oligoform").submit();
-  }
+function initialize() {
+    $("#refresh_twitterfeed").click(function() {    
+        getServerData();
+    });
+    
 }
 
 function getServerData() {

@@ -7,8 +7,6 @@ package nl.bioinf.pfolkertsma.bioinfwebapp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -54,9 +52,12 @@ public class OligoCreator {
                 for (int index = 0; index < seq.length() - (Input.getSize()-1); index++) {
                     Oligo oligo = new Oligo();
                     oligo.sequence = seq.substring(index, index + Input.getSize()).toUpperCase();
-                    if (oligo.calculateMeltingTemp() > Input.getMinTemp() && oligo.calculateMeltingTemp() < Input.getMaxTemp() && oligo.checkNucleotides()) {
-                        output.write(descriptions[i] + "|oligo" + (index + 1) + System.getProperty("line.separator") + oligo.sequence + System.getProperty("line.separator"));
+                    if (oligo.checkNucleotides()) {
+                       if (oligo.calculateMeltingTemp() > Input.getMinTemp() && oligo.calculateMeltingTemp() < Input.getMaxTemp()) {
+                        output.write(descriptions[i] + "|startposition:" + (index + 1) + "|length:" + Input.getSize() + System.getProperty("line.separator") + oligo.sequence + System.getProperty("line.separator"));
+                    } 
                     }
+                    
                 }
             }
             output.close();

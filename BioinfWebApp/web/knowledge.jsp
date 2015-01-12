@@ -44,7 +44,8 @@
                             <li><a href="#tabs-5">Nucleotides</a></li>
                         </ul>
                         <div id="tabs-2">
-                            Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.<br/><br/>
+                            <p>Amino acid information. Here most of the information of the amino acids is placed ( all known information ). 
+                                With the search tool a specific amino acid can be found. Click on a amino acid to open the information.</p>
                             <table id="report" width="100%">
                                        <thead>
                                            <tr>

@@ -5798,12 +5798,12 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 var accordion = $.widget( "ui.accordion", {
 	version: "1.11.2",
 	options: {
-		active: 0,
+		active: false,
 		animate: {},
-		collapsible: false,
+		collapsible: true,
 		event: "click",
 		header: "> li > :first-child,> :not(li):even",
-		heightStyle: "auto",
+		autoHeight: false,
 		icons: {
 			activeHeader: "ui-icon-triangle-1-s",
 			header: "ui-icon-triangle-1-e"

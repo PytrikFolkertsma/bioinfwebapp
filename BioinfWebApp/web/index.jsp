@@ -1,7 +1,7 @@
 <%-- 
     Document   : bioinfHomePage
     Created on : 23-nov-2014, 18:47:44
-    Author     : pfolkertsma, salbassam
+    Author     : Asus
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,25 +25,23 @@
     <div id="site_content">
 	  <div id="top_border"></div>
       <div class="image">
-          <a href="http://www.stcorp.no/technology/bioinformatics/" target="_blank">
          <img src="images/2.jpg" width="970" height="300" alt="gallery_garden_two" />
-         </a>
       </div>
       <div id="sidebar_container">
 	    <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
         <div class="sidebar">
           <h3>Latest News</h3>
           <h4>New Website Launched</h4>
-          <h5>January 1st, 2013</h5>
-          <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
-          <h4>20% Discount</h4>
-          <h5>June 1st, 2013</h5>
-          <p>We are offering a 20% discount to all new customers.<br /><a href="#">Read more</a></p>
+          <h5>December 10th, 2014</h5>
+          <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /></p>
+          <h4>Tools online!</h4>
+          <h5>January 5th, 2015</h5>
+          <p>Tools are now online! And almost functional!<br /></p>
         </div>
       </div>
       <div class="content">
         <h1>Welcome to the Bioinformatics website</h1>
-        
+        <p>Welcome to the bioinformatics website!</p>
         
       
         
