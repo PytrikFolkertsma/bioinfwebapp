@@ -21,7 +21,7 @@ import javax.servlet.http.Part;
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 /**
  *
- * @author pfolkertsma
+ * @author pfolkertsma, salbassam
  */
 @WebServlet(name = "ReversedComplementerServlet", urlPatterns = {"/reversedcomplement.do"})
 public class ReversedComplementerServlet extends HttpServlet {
@@ -51,24 +51,24 @@ public class ReversedComplementerServlet extends HttpServlet {
         String fileName = getFileName(file);
 
         ReversedComplement rc = new ReversedComplement();
-        
-        
+
         if (fileName.equals("")) {
             String userInput = request.getParameter("inputByText");
             String output = rc.makeComplement(userInput);
-           request.setAttribute("output", output);
-           RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
-           view.forward(request, response);
+            request.setAttribute("output", output);
+            RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
+            view.forward(request, response);
         } else {
-            
+
             file.write(uploadFilePath + File.separator + fileName);
             String path = uploadFilePath + File.separator + fileName;
-           // request.setAttribute("output", output);
+            // request.setAttribute("output", output);
             //RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
             //view.forward(request, response);
         }
     }
-private String getFileName(Part part) {
+
+    private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
         System.out.println("content-disposition header= " + contentDisp);
         String[] tokens = contentDisp.split(";");
@@ -79,47 +79,45 @@ private String getFileName(Part part) {
         }
         return "";
     }
-        // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-        /**
-         * Handles the HTTP <code>GET</code> method.
-         *
-         * @param request servlet request
-         * @param response servlet response
-         * @throws ServletException if a servlet-specific error occurs
-         * @throws IOException if an I/O error occurs
-         */
-        @Override
-        protected void doGet
-        (HttpServletRequest request, HttpServletResponse response)
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            processRequest(request, response);
-        }
-
-        /**
-         * Handles the HTTP <code>POST</code> method.
-         *
-         * @param request servlet request
-         * @param response servlet response
-         * @throws ServletException if a servlet-specific error occurs
-         * @throws IOException if an I/O error occurs
-         */
-        @Override
-        protected void doPost
-        (HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-            processRequest(request, response);
-        }
-
-        /**
-         * Returns a short description of the servlet.
-         *
-         * @return a String containing servlet description
-         */
-        @Override
-        public String getServletInfo
-        
-            () {
-        return "Short description";
-        }// </editor-fold>
-
+        processRequest(request, response);
     }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}

@@ -7,7 +7,6 @@ package nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -17,17 +16,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator.MolecularWeight;
 
 /**
  *
- * @author salbassam
+ * @author salbassam <s.albassam@st.hanze.nl>
  */
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10, // 10 MB
         maxFileSize = 1024 * 1024 * 50, // 50 MB
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 public class MolecularWeightServlet extends HttpServlet {
 
+    /**
+     * Directory where uploaded files will be saved, its relative to the web
+     * application directory.
+     */
     private static final String UPLOAD_DIR = "files";
 
     /**
@@ -42,7 +44,7 @@ public class MolecularWeightServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+//        PrintWriter out = response.getWriter();
         MolecularWeight mw = new MolecularWeight();
         String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
 
@@ -56,7 +58,7 @@ public class MolecularWeightServlet extends HttpServlet {
         try {
             if (fileName.equals("")) {
                 String userInput = request.getParameter("inputByText");
-                //            String userInput = request.getParameter("inputByText");
+//            String userInput = request.getParameter("inputByText");
                 String strandType = "";
 //          Create HashMap for userinput
                 HashMap<String, String> fastaMap = null;
@@ -121,6 +123,9 @@ public class MolecularWeightServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Utility method to get file name from HTTP header content-disposition
+     */
     private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
         System.out.println("content-disposition header= " + contentDisp);

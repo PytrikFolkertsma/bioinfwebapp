@@ -39,23 +39,27 @@
                             <c:choose>
                                 <c:when test="${(empty requestScope.test)}">
                                     <p>
-                                        The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent nucleotide in Dalton.
-                                        Place your FASTA data in the text field.
+                                        The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent (mono)nucleotide in Dalton.
+                                        Place your FASTA data in the text field. No FASTA, only a nucleotide sequence? Just place the sequence data in the text field.
                                     </p>
                                     <form action="MolecularWeightServlet.do" method="POST" enctype="multipart/form-data">
+                                         <b>Upload a FASTA file</b><br />
                                         <input type="file" class="filebrowse" name="fileName" id="file" /><br /><br />
+                                        <b>Or:</b><br />
+                                        <textarea name="inputByText" cols="50" placeholder="Copy/Paste your sequence data here..."></textarea>
+                                        <br /><b>Select strand type:</b><br />
                                         <select name="item">
                                             <option value="Single">Single stranded</option>
                                             <option value="Double">Double stranded</option>
                                         </select><br /><br />
-                                        <textarea name="inputByText" cols="50" placeholder="Copy/Paste your sequence data here..."></textarea>
+                                        
                                         <input type="submit" value="Submit"> Calculate Molecular Mass!</input>
                                     </form>
                                 </c:when>
                             </c:choose>
                             <c:if test="${! empty requestScope.test}">
-                                <c:forEach var="country" items="${test}">
-                                    FASTA header: ${country.key}  - Molecular Weight in Dalton: ${country.value} <br />
+                                <c:forEach var="fasta" items="${test}">
+                                    FASTA sequence name: ${fasta.key}  - Molecular Weight in Dalton: ${fasta.value} <br />
                                 </c:forEach>
                                 <input type="button" value="Back" onClick="history.go(-1);
                                         return true;"></input>

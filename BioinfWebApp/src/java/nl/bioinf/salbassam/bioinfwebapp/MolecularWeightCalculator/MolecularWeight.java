@@ -28,6 +28,9 @@ import java.util.Map;
  */
 public class MolecularWeight {
 
+    /**
+     * Path of the FASTA file.
+     */
     private Path pathFastafile;
     /**
      * A string array which contains the descriptions of the sequences from the
@@ -54,6 +57,11 @@ public class MolecularWeight {
         MolecularWeight.molecularWeights.put('U', 112.08676);
     }
 
+    /**
+     * Sets the FASTA file path.
+     *
+     * @param path
+     */
     public void setPathFastafile(String path) {
         pathFastafile = Paths.get(path);
     }
@@ -92,6 +100,11 @@ public class MolecularWeight {
         return fastaMap;
     }
 
+    /**
+     * converts the arraylists to a HashMap.
+     *
+     * @return hashmap of fasta header and sequences.
+     */
     public HashMap<String, String> convertToHashMap() {
         HashMap<String, String> fastaFormat = new HashMap<String, String>();
         for (int i = 0; i < descriptions.length; i++) {
@@ -102,6 +115,9 @@ public class MolecularWeight {
         return fastaFormat;
     }
 
+    /**
+     * Creates two ArrayLists with fasta format {descriptions[]:sequences[]}.
+     */
     public void parseFastafile() {
         List desc = new ArrayList();
         List seq = new ArrayList();
@@ -145,10 +161,10 @@ public class MolecularWeight {
     public Map<String, String> convertAmbiguityCodesFromSequence(HashMap<String, String> fastaMap) {
         Map<String, String> convertedSeqMap = new HashMap<String, String>();
         String convertedSequence;
+        AmbiguityConverter ac = new AmbiguityConverter();
         for (Map.Entry<String, String> fasta : fastaMap.entrySet()) {
             String header = fasta.getKey();
             String sequence = fasta.getValue().toUpperCase();
-            AmbiguityConverter ac = new AmbiguityConverter();
             convertedSequence = ac.ambiguities(sequence);
             convertedSeqMap.put(header, convertedSequence);
         }
@@ -186,13 +202,8 @@ public class MolecularWeight {
         double mw = 0;
         double invalidChar = 0;
 
-//      testing header + total molweight without ambiguity
+//      testing header + total molweight with ambiguity
         Map<String, Double> testmap = new HashMap<String, Double>();
-//      create a list with total mol weight with ambiguity mol weight
-        List<Double> molList = new ArrayList<Double>();
-//      create a hashmap with header as key and as value a list with the total molweight, possible molweight option A and option B of ambiguity, and as last the number of invalid characters in sequence
-        Map<String, ArrayList<Double>> resultMap = new HashMap<String, ArrayList<Double>>();
-
         for (Map.Entry<String, String> fasta : fastaMap.entrySet()) {
             String header = fasta.getKey();
             String sequence = fasta.getValue().toUpperCase();
@@ -205,9 +216,7 @@ public class MolecularWeight {
                     invalidChar++;
                 }
             }
-
             mw = 0;
-
         }
         return testmap;
     }
