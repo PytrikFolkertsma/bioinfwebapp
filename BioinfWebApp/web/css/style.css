@@ -1110,11 +1110,7 @@ table.dataTable td {
   }
 }
 
-.hover
-{
-    background: darkgrey;
-    color: black;
-}
+
 
 #highlight {
    font-size: 14px;
@@ -1132,4 +1128,43 @@ table.dataTable td {
 
 div.infoblast{
     display: none;
+}
+
+#colors
+{
+    color: red;
+}
+
+#codon-bg{
+    text-align: left;
+    color: black;
+    background: white;
+}
+.codon-table
+{   border: 2px solid white;
+    background: black;
+    border-collapse: collapse;  
+} 
+.codon-table th{
+    padding: 12px 18px;
+    border: 2px solid white;
+}
+.codon-table td
+{   border: 2px solid white;
+    padding: 25px 40px;  
+}
+.dialog:hover
+{
+    background: darkgrey;
+    color: black;
+}
+#highlight td{
+   text-align: justify;
+   font-size: 14px;
+   padding: 0;
+   border: 0;
+}
+#highlight {
+   font-size: 14px;
+   border: 0;
 }

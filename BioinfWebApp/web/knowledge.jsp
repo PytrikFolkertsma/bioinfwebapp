@@ -290,165 +290,173 @@
                             </c:if>
                         </div>
                         <div id="tabs-3">
-                            <table id="CodonTable">
-                                        <tr>
-                                                <th> </th>
-                                                <th> U </th>
-                                                <th> C </th>
-                                                <th> A </th>
-                                                <th> G </th>
-                                        </tr>
-                                        <tr>
-                                            <th> U </th>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Phenylalanine">
-                                                        <td class="dialog"style="cursor: pointer;">UUU <br /> UUC <br /></td>
-                                                    </tr>
-                                                    <tr id="Leucine">
-                                                        <td class="dialog"style="cursor: pointer;"> UUA <br /> UUG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Serine">
-                                                       <td class="dialog"style="cursor: pointer;"> UCU <br /> UCC <br /> UCA <br /> UCG </td>   
-                                                    </tr> 
-                                                </table>
-                                            </td>
-                                            <td> 
-                                                <tabLe id="highlight"> 
-                                                    <tr id="Tyrosine">
-                                                        <td class="dialog"style="cursor: pointer;"> UAU <br /> UAC </td>
-                                                    </tr>
-                                                    <tr id="Stop Codon">
-                                                        <td class="dialog"style="cursor: pointer;">UAA <br /> UAG </td>
-                                                    </tr>
-                                                </table>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Cysteine">
-                                                        <td class="dialog"style="cursor: pointer;"> UGU <br /> UGC</td>
-                                                    </tr>
-                                                    <tr id="Stop Codon">
-                                                        <td class="dialog"style="cursor: pointer;"> UGA </td>
-                                                    </tr>
-                                                    <tr id="Tryptophan">
-                                                        <td class="dialog"style="cursor: pointer;"> UGG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th> C </th>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Leucine">
-                                                        <td class="dialog"style="cursor: pointer;"> CUU <br /> CUC <br/> CUA <br/> CUG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Proline">
-                                                        <td class="dialog"style="cursor: pointer;"> CCU <br /> CCC <br /> CCA <br /> CCG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Histidine">
-                                                        <td class="dialog"style="cursor: pointer;"> CAU <br /> CAC</td>
-                                                    </tr>
-                                                    <tr id="Glutamine">
-                                                        <td class="dialog"style="cursor: pointer;">CAA <br /> CAG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Arginine">
-                                                        <td class="dialog"style="cursor: pointer;"> CGU <br> CGC <br> CGA <br> CGG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th> A </th>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Isoleucine">
-                                                        <td class="dialog"style="cursor: pointer;"> AUU <br> AUC <br> AUA</td>
-                                                    </tr>
-                                                    <tr id="Methionine">
-                                                        <td class="dialog"style="cursor: pointer;">AUG </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Threonine">
-                                                        <td class="dialog"style="cursor: pointer;">ACU <br> ACC <br> ACA <br> ACG </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Asparagine">
-                                                        <td class="dialog"style="cursor: pointer;" ACU <br> ACC</td>
-                                                    </tr>
-                                                    <tr id="Lysine">
-                                                        <td class="dialog"style="cursor: pointer;">AAA <br> AAG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Serine">
-                                                        <td class="dialog"style="cursor: pointer;"> AGU <br> AGC</td>
-                                                    </tr>
-                                                    <tr id="Arginine">
-                                                        <td class="dialog"style="cursor: pointer;">AGA <br> AGG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th> G </th>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Valine">
-                                                        <td class="dialog"style="cursor: pointer;">GUU <br> GUC <br> GUA <br> GUG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Alanine">
-                                                        <td class="dialog"style="cursor: pointer;">GCU <br> GCC <br> GCA <br> GCG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                             <td>
-                                                <table id="highlight">
-                                                    <tr id="Aspartate">
-                                                        <td class="dialog"style="cursor: pointer;">GAU <br> GAC</td>
-                                                    </tr>
-                                                    <tr id="Glutamine">
-                                                        <td class="dialog"style="cursor: pointer;">GAA <br> GAG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                <table id="highlight">
-                                                    <tr id="Glycine">
-                                                        <td class="dialog"style="cursor: pointer;">GGU <br> GGC <br> GGA <br> GGG</td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                </table>
+                           
+                            <table class="codon-table">
+									<tr>
+										<th> </th>
+										<th> U </th>
+										<th> C </th>
+										<th> A </th>
+										<th> G </th>
+									</tr>
+									<tr>
+                                                                            <th> U </th>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Phenylalanine">
+                                                                                        <td class="dialog">UUU <br /> UUC <br /></td>
+                                                                                    </tr>
+                                                                                    <tr id="Leucine">
+                                                                                        <td class="dialog"> UUA <br /> UUG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Serine">
+                                                                                       <td class="dialog"> UCU <br /> UCC <br /> UCA <br /> UCG </td>   
+                                                                                    </tr> 
+                                                                                </table>
+                                                                            </td>
+                                                                            <td> 
+                                                                                <tabLe id="highlight"> 
+                                                                                    <tr id="Tyrosine">
+                                                                                        <td class="dialog"> UAU <br /> UAC </td>
+                                                                                    </tr>
+                                                                                    <tr id="Stop Codon">
+                                                                                        <td id="colors" class="dialog">UAA <br /> UAG </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Cysteine">
+                                                                                        <td class="dialog"> UGU <br /> UGC</td>
+                                                                                    </tr>
+                                                                                    <tr id="Stop Codon and Tryptophan">
+                                                                                        <td id="colors" class="dialog"> UGA </td>
+                                                                                    </tr>
+                                                                                    <tr id="Tryptophan">
+                                                                                        <td class="dialog"> UGG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+									</tr>
+									<tr>
+                                                                            <th> C </th>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Leucine">
+                                                                                        <td class="dialog"> CUU <br /> CUC <br/> CUA <br/> CUG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Proline">
+                                                                                        <td class="dialog"> CCU <br /> CCC <br /> CCA <br /> CCG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Histidine">
+                                                                                        <td class="dialog"> CAU <br /> CAC</td>
+                                                                                    </tr>
+                                                                                    <tr id="Glutamine">
+                                                                                        <td class="dialog">CAA <br /> CAG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Arginine">
+                                                                                        <td class="dialog"> CGU <br> CGC <br> CGA <br> CGG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+									</tr>
+									<tr>
+                                                                            <th> A </th>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Isoleucine">
+                                                                                        <td class="dialog"> AUU <br> AUC </td>
+                                                                                    </tr>
+                                                                                    <tr id="Isoleucine and Methionine">
+                                                                                        <td id="colors" class="dialog">AUA</td>
+                                                                                    </tr>
+                                                                                    <tr id="Methionine">
+                                                                                        <td id="colors" class="dialog">AUG </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Threonine">
+                                                                                        <td class="dialog">ACU <br> ACC <br> ACA <br> ACG </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Asparagine">
+                                                                                        <td class="dialog"> ACU <br> ACC</td>
+                                                                                    </tr>
+                                                                                    <tr id="Lysine">
+                                                                                        <td class="dialog">AAA <br> AAG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Serine">
+                                                                                        <td class="dialog"> AGU <br> AGC</td>
+                                                                                    </tr>
+                                                                                    <tr id="Arginine and Tryptophan">
+                                                                                        <td id="colors" class="dialog">AGA <br> AGG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+									</tr>
+									<tr>
+                                                                            <th> G </th>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Valine">
+                                                                                        <td class="dialog">GUU <br> GUC <br> GUA <br> GUG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Alanine">
+                                                                                        <td class="dialog">GCU <br> GCC <br> GCA <br> GCG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                             <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Aspartate">
+                                                                                        <td class="dialog">GAU <br> GAC</td>
+                                                                                    </tr>
+                                                                                    <tr id="Glutamine">
+                                                                                        <td class="dialog">GAA <br> GAG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td>
+                                                                                <table id="highlight">
+                                                                                    <tr id="Glycine">
+                                                                                        <td class="dialog">GGU <br> GGC <br> GGA <br> GGG</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+									</tr>
+								</table>
+                                                            <div id="dialog" title="Amino Acid Information"></div>
+							
+                            
+                            
                         </div>
                         <div id="tabs-4">
                             <table id="blast" width="100%">
