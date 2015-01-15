@@ -29,9 +29,6 @@ import javax.servlet.http.Part;
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 
 public class OligoServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 205242440643911308L;
-
     /**
      * Directory where uploaded files will be saved, its relative to the web
      * application directory.

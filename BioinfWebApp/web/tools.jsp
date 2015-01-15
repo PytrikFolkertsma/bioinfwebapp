@@ -42,7 +42,7 @@
                                         The Molecular Weight Calculator calculates the molecular mass of any sequence (DNA/RNA). It is calculated as the sum of the mass of each constituent (mono)nucleotide in Dalton.
                                         Place your FASTA data in the text field. No FASTA, only a nucleotide sequence? Just place the sequence data in the text field.
                                     </p>
-                                    <form action="MolecularWeightServlet.do" method="POST" enctype="multipart/form-data">
+                                    <form id="form1" action="MolecularWeightServlet.do" method="POST" enctype="multipart/form-data">
                                          <b>Upload a FASTA file</b><br />
                                         <input type="file" class="filebrowse" name="fileName" id="file" /><br /><br />
                                         <b>Or:</b><br />
@@ -64,6 +64,7 @@
                                 <input type="button" value="Back" onClick="history.go(-1);
                                         return true;"></input>
                             </c:if>
+                                      
                         </div>
 
 

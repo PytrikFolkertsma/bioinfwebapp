@@ -17,3 +17,4 @@
 <script src="js/jQueryElements.js" type="text/javascript"></script>
 <script src="js/slider.js" type="text/javascript"></script>
 <script src="js/my_site_script.js" type="text/javascript"></script>
+<script src="js/passingResultsWithAjax.js" type="text/javascript"></script>

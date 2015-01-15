@@ -7,7 +7,6 @@ package nl.bioinf.bioinfwebportal.code;
 
 import java.io.File;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -42,6 +41,8 @@ public class ReversedComplementerServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 //        PrintWriter out = response.getWriter();
         String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
+        
+        /*
 
         File fileSaveDir = new File(uploadFilePath);
         if (!fileSaveDir.exists()) {
@@ -66,6 +67,7 @@ public class ReversedComplementerServlet extends HttpServlet {
             //RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
             //view.forward(request, response);
         }
+        */
     }
 
     private String getFileName(Part part) {
