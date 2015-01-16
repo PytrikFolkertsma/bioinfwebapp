@@ -221,4 +221,28 @@ public class MolecularWeight {
         return testmap;
     }
 
+    /**
+     * checkValidSequence checks if sequence of fasta description has numbers.
+     *
+     * @param fastaMap map of descriptions and sequences.
+     * @return string message to user.
+     */
+    public String checkValidSequence(HashMap<String, String> fastaMap) {
+        int countIll = 0;
+        String key = "";
+        for (Map.Entry<String, String> entrySet : fastaMap.entrySet()) {
+            key = entrySet.getKey();
+            String sequence = entrySet.getValue().toUpperCase();
+            for (int i = 0; i < sequence.length(); i++) {
+                if (Character.isDigit(sequence.charAt(i))) {
+                    countIll++;
+                } else {
+                    System.out.println(key + " has ambiguity in sequence.");
+                }
+            }
+        }
+
+        return "sequence has" + countIll + " numbers in name: " + key;
+    }
+
 }

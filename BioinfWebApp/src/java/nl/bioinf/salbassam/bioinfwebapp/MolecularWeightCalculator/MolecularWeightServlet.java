@@ -7,6 +7,7 @@ package nl.bioinf.salbassam.bioinfwebapp.MolecularWeightCalculator;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -44,7 +45,7 @@ public class MolecularWeightServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-//        PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
         MolecularWeight mw = new MolecularWeight();
         String uploadFilePath = request.getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
 
@@ -57,6 +58,7 @@ public class MolecularWeightServlet extends HttpServlet {
         String fileName = getFileName(file);
         try {
             if (fileName.equals("")) {
+                String warningMsg = "";
                 String userInput = request.getParameter("inputByText");
 //            String userInput = request.getParameter("inputByText");
                 String strandType = "";
@@ -71,12 +73,14 @@ public class MolecularWeightServlet extends HttpServlet {
 //          when Double stranded is selected the following is being processed
                 if (strandType.equals("Double")) {
                     fastaMap = mw.digestUserInput(userInput);
+                    warningMsg = mw.checkValidSequence(fastaMap);
                     Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
                     Map<String, String> doubleStrandMap = mw.getDoubleStrand((HashMap<String, String>) convertedSequenceMap);
                     resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) doubleStrandMap);
                 } else {
 //          when Default (Single stranded) is selected for further process
                     fastaMap = mw.digestUserInput(userInput);
+                    warningMsg = mw.checkValidSequence(fastaMap);
                     Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
                     resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) convertedSequenceMap);
                 }
@@ -89,6 +93,7 @@ public class MolecularWeightServlet extends HttpServlet {
                 String path = uploadFilePath + File.separator + fileName;
                 mw.setPathFastafile(path);
                 mw.parseFastafile();
+                String warningMsg = "";
                 String strandType = "";
 //          Create HashMap for userinput
                 HashMap<String, String> fastaMap = null;
@@ -101,15 +106,19 @@ public class MolecularWeightServlet extends HttpServlet {
 //          when Double stranded is selected the following is being processed
                 if (strandType.equals("Double")) {
                     fastaMap = mw.convertToHashMap();
+                    warningMsg = mw.checkValidSequence(fastaMap);
                     Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
                     Map<String, String> doubleStrandMap = mw.getDoubleStrand((HashMap<String, String>) convertedSequenceMap);
                     resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) doubleStrandMap);
                 } else {
 //          when Default (Single stranded) is selected for further process
                     fastaMap = mw.convertToHashMap();
+                    warningMsg = mw.checkValidSequence(fastaMap);
                     Map<String, String> convertedSequenceMap = mw.convertAmbiguityCodesFromSequence(fastaMap);
                     resultMolMassMap = mw.calculateMolMass((HashMap<String, String>) convertedSequenceMap);
                 }
+
+                request.setAttribute("warningMsg", warningMsg);
                 request.setAttribute("test", resultMolMassMap);
                 //            Testing results to frontend
                 RequestDispatcher view = request.getRequestDispatcher("tools.jsp");
