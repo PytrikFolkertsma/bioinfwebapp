@@ -40,8 +40,8 @@
         </div>
       </div>
       <div class="content">
-        <h1>Welcome to the Bioinformatics website</h1>
-        <p>Welcome to the bioinformatics website!</p>
+        <h1>Welcome to the bioinformatics portal!</h1>
+        <p>Welcome to the bioinformatics portal.</p>
         
       
         
