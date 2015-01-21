@@ -3,7 +3,6 @@
     Created on : Nov 27, 2014, 1:50:56 PM
     Author     : pfolkertsma, salbassam
 --%>
-
       <nav>
         <ul class="sf-menu" id="nav">
           <li class="selected"><a href="index.jsp">Home</a></li>
@@ -11,6 +10,5 @@
           <li><a href="tools.jsp">Tools</a></li>
           <li><a href="quizzing.jsp">Quizzing</a></li>
           <li><a href="contact.jsp">Contact</a></li>
-          <li><a href="tutorial.jsp">Help</a></li>
         </ul>
       </nav>

@@ -27,18 +27,7 @@
                 <div class="image">
                     <%@include file="./includes/bodyWebImage.jsp" %>
                 </div>
-                <div id="sidebar_container">
-                    <img class="paperclip" src="images/paperclip.png" alt="paperclip" />
-                    <div class="sidebar">
-                        <h3>Latest News</h3>
-                        <h4>New Website Launched</h4>
-                        <h5>January 1st, 2013</h5>
-                        <p>2013 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
-                        <h4>20% Discount</h4>
-                        <h5>June 1st, 2013</h5>
-                        <p>We are offering a 20% discount to all new customers.<br /><a href="#">Read more</a></p>
-                    </div>
-                </div>
+               
                 <div class="content">
                     <h1>Contact</h1>
 
@@ -54,7 +43,6 @@
                     <p>
                         Zernikeplein 11<br />
                         9747 AS Groningen<br />
-                        Tel: 050-5957870
                     </p>
                 </div>        
             </div>       
