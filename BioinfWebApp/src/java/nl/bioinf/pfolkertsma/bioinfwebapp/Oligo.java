@@ -79,7 +79,6 @@ public class Oligo {
      * @return a double which contains the melting temperature of the sequence.
      */
     public double calculateMeltingTemp() {
-        
         double temp;
         Map<Character, Integer> frequencies = new HashMap();
         frequencies.put('A', 0);
@@ -95,9 +94,7 @@ public class Oligo {
         } else {
             temp = 64.9 + 41 * ((frequencies.get('G') + frequencies.get('C'))-16.4) / sequence.length();
         }
-       
         return temp;
-        
     }
     /**
      * This method checks if a given sequence is a valid sequence (only contains A, C, T and G).

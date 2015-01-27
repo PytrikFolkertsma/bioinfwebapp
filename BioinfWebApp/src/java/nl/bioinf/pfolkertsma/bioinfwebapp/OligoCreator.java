@@ -57,7 +57,6 @@ public class OligoCreator {
                         output.write(descriptions[i] + "|startposition:" + (index + 1) + "|length:" + Input.getSize() + System.getProperty("line.separator") + oligo.sequence + System.getProperty("line.separator"));
                     } 
                     }
-                    
                 }
             }
             output.close();
@@ -91,8 +90,7 @@ public class OligoCreator {
                 seq.add(buffer.toString());
             }
         } catch (IOException e) {
-            System.out.println("Error when reading " + pathFastafile);
-            e.printStackTrace();
+            System.out.println("Error while reading " + pathFastafile);
         }
         descriptions = new String[desc.size()];
         sequences = new String[seq.size()];
