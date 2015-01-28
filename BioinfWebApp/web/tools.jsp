@@ -33,6 +33,12 @@
 
                 <div class="content">
                     <h1>Tools</h1>
+                    <p>
+                        On this page you can find several tools that will make your life as a bioinformatics student or teacher just that much easier!
+                        You want a random fasta file to use BLAST on, no problem, check out the random fasta generator!
+                        If you want your DNA sequence translated to a protein sequence, you should try out the new DNA translator.
+                        Just take a look at all the tools, they are easy and free to use.
+                    </p>
                     <div id="accordion">
                         <h3>Molecular Weight</h3>
                         <div>

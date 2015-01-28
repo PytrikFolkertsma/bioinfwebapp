@@ -37,14 +37,25 @@
           <h4>Tools online!</h4>
           <h5>January 5th, 2015</h5>
           <p>Tools are now online! And almost functional!<br /></p>
+          <h4>Knowledge!</h4>
+          <h5>January 5th, 2015</h5>
+          <p>The knowledge database is now available for usage.<br /></p>
         </div>
       </div>
       <div class="content">
-        <h1>Welcome to the bioinformatics portal!</h1>
-        <p>Welcome to the bioinformatics portal.</p>
-        
-      
-        
+        <h1>Home</h1>
+        <p>
+            Welcome to the updated portal of the bioinformatics website!
+        </p>
+        <p>
+            This portal provides knowledge and functional tools for bioinformatics students.
+            In the knowledge section you will find all kinds of information about useful subjects,
+            such as amino acid information, codon tables and BLAST information. 
+            Furthermore you can find a molecular weigh calculator, an oligo creator, a DNA translator,
+            a reverse complementer and a random fasta generator in the tools section. 
+            You think you have learned enough? Go take a quiz in the quizzing section of the portal! 
+            The quizzes contain questions about information from the knowledge section.
+        </p>
       </div>        
       </div>
     
